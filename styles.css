@@ -2,6 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Righteous&display=swap');
 
 
+:root {
+    --primary:  rgb(139, 117, 162);
+    --dark: #60a1cf;
+    --black: #60a1cf;
+    --light: white;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +22,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(dudlaj.me.png) no-repeat;
+    background: url() no-repeat;
     background-position: center;
     background-size: 90%;
 }
@@ -37,7 +45,7 @@ header {
 .logo {
     font-size: 2rem;
     font-family: Righteous;
-    color: rebeccapurple;
+    color:  rgb(139, 117, 162);
     user-select: none;
     cursor: pointer;
 }
@@ -45,7 +53,7 @@ header {
 .navigation a {
     position: relative;
     font-size: 1.1rem;
-    color: rebeccapurple;
+    color: var(--primary);
     text-decoration: none;
     font-weight: 600;
     margin-left: 40px;
@@ -59,7 +67,7 @@ header {
     bottom: -6px;
     width: 100%;
     height: 3px;
-    background: rebeccapurple;
+    background: var(--primary);
     border-radius: 5px;
     transform-origin: right;
     transform: scaleX(0);
@@ -70,11 +78,11 @@ header {
     transform: scaleX(1);
 }
 
-.loginBtn-popup {
+.Btn-popup {
     width: 120px;
     height: 45px;
     background: transparent;
-    border: 2px solid rebeccapurple;
+    border: 2px solid var(--primary);
     outline: none;
     border-radius: 25px;
     cursor: pointer;
@@ -86,9 +94,9 @@ header {
 
 }
 
-.loginBtn-popup:hover {
-    background: rebeccapurple;
-    color: white;
+.Btn-popup:hover {
+    background: var(--primary);
+    color: var(--light);
 }
 
 
@@ -119,7 +127,7 @@ header {
     font-size: 2rem;
     font-family: Righteous;
     text-align: center;
-    color: white;
+    color: var(--light);
     user-select: none;
    
 }
@@ -146,18 +154,18 @@ header {
   
     width: 160px;
     height: 45px;
-    background: white;
-    border: 2px solid rebeccapurple;
+    background: var(--light);
+    border: 2px solid var(--primary);
     outline: none;
     border-radius: 25px;
     cursor: pointer;
     font-size: 1.1rem;
-    color: rebeccapurple;
+    color: var(--primary);
     font-weight: 700;
     transition: .5s;
 }
 
 .login-form button:hover {
-    background: rebeccapurple;
-    color: white;
+    background: var(--primary);
+    color: var(--light);
 }
