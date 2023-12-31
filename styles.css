@@ -114,3 +114,11 @@ header {
     justify-content: center;
 
 }
+
+img {
+
+
+    width: 35%;
+    height: 35%;
+    border-radius: 50%;
+}
