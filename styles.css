@@ -8,6 +8,8 @@
     --black: #0d1117;
     --gray: #373737;
     --light: white;
+    --opacity: 20%;
+
 }
 
 
@@ -33,6 +35,9 @@ body {
 
 /* --- header sekcija --- */
 header {
+    border-bottom: 2px solid var(--gray) ;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px var(--gray);
     position: fixed;
     top: 0;
     left: 0;
@@ -108,7 +113,7 @@ header {
     width: 400px;
     height: 440px;
     background: transparent;
-    border: 2px solid var(--gray .95);
+    border: 2px solid var(--gray) 95%;
     border-radius: 20px;
     backdrop-filter: blur(20px);
     box-shadow: 0 0 30px var(--gray);
