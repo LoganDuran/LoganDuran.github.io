@@ -51,9 +51,15 @@ header {
 .logo {
     font-size: 2rem;
     font-family: Righteous;
-    color:  var(--primary);
+    color:  var(--light);
     user-select: none;
     cursor: pointer;
+}
+
+.logo span {
+    color:  var(--primary);
+    font-family: Righteous;
+
 }
 
 .navigation a {
