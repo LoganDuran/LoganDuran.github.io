@@ -3,12 +3,11 @@
 
 
 :root {
-    --primary:  rgb(139, 117, 162);
+    --primary:  rgb(151, 136, 166);
     --dark: #60a1cf;
     --black: #0d1117;
     --gray: #373737;
     --light: white;
-    --opacity: 20%;
 
 }
 
@@ -111,7 +110,8 @@ header {
 .wrapper {
     position: relative;
     width: 400px;
-    height: 440px;
+    height: auto;
+    padding: 30px;
     background: transparent;
     border: 2px solid var(--gray) 95%;
     border-radius: 20px;
