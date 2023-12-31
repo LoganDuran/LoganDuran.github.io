@@ -5,7 +5,8 @@
 :root {
     --primary:  rgb(139, 117, 162);
     --dark: #60a1cf;
-    --black: #60a1cf;
+    --black: #0d1117;
+    --gray: #373737;
     --light: white;
 }
 
@@ -22,7 +23,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url() no-repeat;
+    background: var(--black);
     background-position: center;
     background-size: 90%;
 }
@@ -106,19 +107,24 @@ header {
     width: 400px;
     height: 440px;
     background: transparent;
-    border: 2px solid rgb(255, 255, 255 .5);
+    border: 2px solid var(--gray .95);
     border-radius: 20px;
     backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, .95);
+    box-shadow: 0 0 30px var(--gray);
     display: flex;
     justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
 
 }
 
 img {
 
 
-    width: 35%;
-    height: 35%;
+    width: 50%;
+    height: 50%;
     border-radius: 50%;
+    border: 2px solid var(--gray .95);
+    box-shadow: 0 0 30px var(--gray);
 }
