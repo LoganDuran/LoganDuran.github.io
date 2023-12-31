@@ -45,7 +45,7 @@ header {
 .logo {
     font-size: 2rem;
     font-family: Righteous;
-    color:  rgb(139, 117, 162);
+    color:  var(--primary);
     user-select: none;
     cursor: pointer;
 }
@@ -87,7 +87,7 @@ header {
     border-radius: 25px;
     cursor: pointer;
     font-size: 1.1rem;
-    color: rebeccapurple;
+    color: var(--primary);
     font-weight: 700;
     margin-left: 40px;
     transition: .5s;
