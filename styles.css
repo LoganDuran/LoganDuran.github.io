@@ -6,7 +6,7 @@
     --primary:  rgb(151, 136, 166);
     --dark: #60a1cf;
     --black: #0d1117;
-    --gray: #373737;
+    --gray: #30363d;
     --light: white;
 
 }
@@ -65,7 +65,7 @@ header {
 .navigation a {
     position: relative;
     font-size: 1.1rem;
-    color: var(--primary);
+    color: var(--light);
     text-decoration: none;
     font-weight: 600;
     margin-left: 40px;
@@ -90,16 +90,18 @@ header {
     transform: scaleX(1);
 }
 
+
+
 .Btn-popup {
     width: 120px;
     height: 45px;
-    background: transparent;
+    background: var(--gray);
     border: 2px solid var(--primary);
     outline: none;
     border-radius: 25px;
     cursor: pointer;
     font-size: 1.1rem;
-    color: var(--primary);
+    color: var(--light);
     font-weight: 700;
     margin-left: 40px;
     transition: .5s;
@@ -112,17 +114,15 @@ header {
 }
 
 
+
 /* --- Slika i uvodni tekst --- */
 .wrapper {
     position: relative;
     width: 400px;
     height: auto;
     padding: 30px;
-    background: transparent;
-    border: 2px solid var(--gray) 95%;
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px var(--gray);
+    border: 2px solid var(--gray) ;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -132,11 +132,14 @@ header {
 }
 
 img {
-
+    margin: 20px;
 
     width: 50%;
     height: 50%;
     border-radius: 50%;
-    border: 2px solid var(--gray .95);
     box-shadow: 0 0 30px var(--gray);
+}
+
+p {
+    margin: 6px;
 }
