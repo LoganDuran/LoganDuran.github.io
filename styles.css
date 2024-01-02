@@ -179,6 +179,8 @@ p {
 
 .icon button {
     margin: 5px;
+    padding: 2px;
+    font-size: 1.0rem;
 }
 
 
