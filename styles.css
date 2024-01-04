@@ -53,7 +53,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    z-index: 9;
 }
 
 .logo {
@@ -137,9 +137,10 @@ nav{
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     width: auto;
-    height: 700px;
+    height: 600px;
+    padding: 40px;
 }
 
 .wrapper {
@@ -165,9 +166,11 @@ nav{
     box-shadow: 0 0 30px var(--gray);
 }
 
-p {
+.avatar p {
     margin: 6px;
 }
+
+
 
 /* icone */
 .icon {
@@ -182,6 +185,82 @@ p {
     padding: 2px;
     font-size: 1.0rem;
 }
+
+/* ---- Timeline ----- */
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    
+}
+.timeline ul li {
+    margin-bottom: 50px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.point {
+    min-width: 20px;
+    height: 20px;
+    background-color: var(--black);
+    border-radius: 100%;
+    z-index: 2;
+    border: 3px var(--gray) solid;
+    position: relative;
+}
+.point.point-right {
+    right: 9px;
+}
+
+.point.point-left {
+    left: 11px;
+}
+
+.timeline ul li .content {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.timeline ul li .content h3 {
+    padding: 10px 20px;
+    background-color: var(--gray);
+    margin-bottom: 0;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.timeline ul li .content :hover{
+    background-color: var(--primary);
+    transition: .7s;
+
+
+}
+
+.timeline ul li .content p {
+    padding: 10px 20px;
+    background-color: var(--gray);
+    margin-top: 0;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.timeline ul li:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    left: 50%;
+    background-color: var(--gray);
+}
+
+
 
 
 /* --- MyTechStack --- */
@@ -226,6 +305,12 @@ p {
     border-radius: 10px;
 }
 
+.tabs:hover {
+    background: var(--primary);
+    color: var(--light);
+    transition: .4s;
+}
+
 
 /* --- MyProjects --- */
 
@@ -236,6 +321,56 @@ p {
     border-top: 2px solid;
     border-color: var(--gray);
     /* background: red; */
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    height: 25vh;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    border-radius: 50px;
+    color: #fff;
+    flex: 0.5;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 6;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in o.4s;
+}
+
+@media (max-width:480px) {
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(5),
+    .panel:nth-of-type(6) {
+        display: none;
+    }
 }
 
 /* --- Contact --- */
