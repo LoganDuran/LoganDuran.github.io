@@ -317,7 +317,7 @@ nav{
 #projects {
     display: inline-block;
     width: 100%;
-    height: 700px;
+    height: 500px;
     border-top: 2px solid;
     border-color: var(--gray);
     /* background: red; */
@@ -335,7 +335,7 @@ nav{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 50vh;
     border-radius: 50px;
     color: #fff;
     flex: 0.5;
@@ -379,5 +379,5 @@ nav{
     display: inline-block;
     width: 100%;
     height: 700px;
-    background: aqua;
+    /* background: aqua; */
 }
