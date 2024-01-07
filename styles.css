@@ -38,6 +38,13 @@ body {
     color: var(--light);
 }
 
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
 
 
 /* --- header sekcija --- */
@@ -59,6 +66,7 @@ header {
 .logo {
     font-size: 2rem;
     font-family: Righteous;
+    font-weight: bold;
     color:  var(--light);
     user-select: none;
     cursor: pointer;
@@ -75,7 +83,11 @@ nav{
     align-items: center;
 }
 
-.navlinks a {
+.navlist {
+    display: flex;
+}
+
+.navlist a {
     position: relative;
     font-size: 1.1rem;
     color: var(--light);
@@ -84,8 +96,15 @@ nav{
     margin-left: 40px;
 }
 
-/* --- zezalica ---  */  
-.navlinks a::after {
+
+.hamburger-menu {
+    display: none; 
+    cursor: pointer;
+}
+
+
+/* --- Slajder ---  */  
+.navlist a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -98,14 +117,14 @@ nav{
     transform: scaleX(0);
     transition: transform .5s;
 }
-.navlinks a:hover::after {
+.navlist a:hover::after {
     transform-origin: left;
     transform: scaleX(1);
 }
 
 
-
-.Btn-popup {
+/* --- Dugme --- */
+.button {
     width: 120px;
     height: 45px;
     background: var(--gray);
@@ -121,7 +140,7 @@ nav{
 
 }
 
-.Btn-popup:hover {
+.button:hover {
     background: var(--primary);
     border: 2px solid var(--primary);
     color: var(--light);
