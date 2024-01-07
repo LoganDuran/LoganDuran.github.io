@@ -32,10 +32,20 @@ html {
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: var(--black);
     color: var(--light);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    padding-top: 120px;
 }
 
 a{
@@ -48,7 +58,7 @@ ul{
 
 
 /* --- header sekcija --- */
-header {
+.header {
     border-bottom: 2px solid var(--gray) ;
     backdrop-filter: var(--blur);
     box-shadow: var(--shadow);
@@ -158,13 +168,11 @@ nav{
     flex-direction: column;
     justify-content: flex-end;
     width: auto;
-    height: 600px;
-    padding: 40px;
 }
 
 .wrapper {
-    width: 400px;
-    height: auto;
+    width: 360px;
+    height: 350px;
     padding: 30px;
     border: 2px solid var(--gray) ;
     border-radius: 10px;
@@ -178,9 +186,8 @@ nav{
 
 .avatar {
     margin: 20px;
-
-    width: 50%;
-    height: 50%;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     box-shadow: 0 0 30px var(--gray);
 }
@@ -196,6 +203,8 @@ nav{
     margin: 10px;
     display: flex;
     align-items: center;
+    flex-direction: row;
+    justify-content: center;
     
 }
 
@@ -208,9 +217,10 @@ nav{
 /* ---- Timeline ----- */
 
 .timeline {
+
     position: relative;
-    margin: 0 auto;
-    width: 90%;
+    margin: 25px auto;
+    width: 80%;
     
 }
 .timeline ul li {
@@ -382,6 +392,24 @@ nav{
     transition: opacity 0.3s ease-in o.4s;
 }
 
+
+/* --- Contact --- */
+
+#contact {
+    display: inline-block;
+    width: 100%;
+    height: 700px;
+    /* background: aqua; */
+}
+
+
+
+
+
+
+
+/* ---- Responsivenes ---- */
+
 @media (max-width:480px) {
     .container {
         width: 100vw;
@@ -392,11 +420,76 @@ nav{
     }
 }
 
-/* --- Contact --- */
 
-#contact {
-    display: inline-block;
-    width: 100%;
-    height: 700px;
-    /* background: aqua; */
+@media (max-width: 880px) {
+
+    main {
+        width: 100vw;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .navlist {
+        display: flex;
+        flex-direction: column;
+        gap: .6rem;
+    }
+
+    .hamburger-menu {
+        display: block;
+
+        z-index: 2;
+    }
+
+    .nav {
+        position: absolute;
+        top: -100vh;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+
+        align-items: center;
+        text-align: center;
+        background-color: transparent;
+        color: var(--light);
+
+        transition: 0.15s ease-in-out;
+    }
+
+    header.active {
+        backdrop-filter:none;
+    }   
+
+    .nav.active {
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        background: transparent;
+        color: var(--light);
+        backdrop-filter: blur(20px);
+        box-shadow: var(--shadow);
+        z-index: 1;
+    }
+
+    .nav.active a{
+        display: flex;
+        align-items: flex-start;
+        margin: 30px; 
+        
+    }
+
+
+    .tab-wrapper {
+        grid-template-columns: 180px 180px ;
+        grid-template-rows: 150px 150px 150px 150px;
+        
+    
+    }
+
 }
