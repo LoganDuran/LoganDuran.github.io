@@ -135,32 +135,6 @@ nav{
 }
 
 
-/* --- Dugme --- */
-.button {
-    width: 120px;
-    height: 45px;
-    background: var(--gray);
-    border: 2px solid var(--gray);
-    outline: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    color: var(--light);
-    font-weight: 700;
-    margin-left: 40px;
-    transition: .5s;
-
-}
-
-.button:hover {
-    background: var(--primary);
-    border: 2px solid var(--primary);
-    color: var(--light);
-}
-
-
-
-
 
 /* --- intro i AboutMe --- */
 
@@ -170,20 +144,31 @@ nav{
     align-items: center;
     flex-direction: column;
     justify-content: flex-end;
-    width: auto;
+    /* width: 90vw; */
 }
 
 .wrapper {
-    width: 360px;
-    height: 350px;
-    padding: 30px;
+    width: 320px;
+    height: auto;
+    /* padding: 30px 30px 0 30px; */
     border: 2px solid var(--gray) ;
-    border-radius: 10px;
+    border-radius: var(--radius);
+    /* border-top-left-radius:  var(--radius);
+    border-top-right-radius:  var(--radius); */
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+
+}
+
+.content-padding {
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 
 }
 
@@ -200,22 +185,63 @@ nav{
 }
 
 
+/* --- Buttons --- */
+.divbutton {
+    width: 100%;
+    height: 45px;
+    background: var(--gray);
+    border: 2px solid var(--gray);
+    outline: none;
+    /* border-radius: 25px; */
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--light);
+    font-weight: 700;
+    /* margin-left: 40px; */
+    transition: .5s;
+}
 
-/* icone */
-.icon {
-    margin: 10px;
+.divbutton:hover {
+    background: var(--primary);
+    border: 2px solid var(--primary);
+    color: var(--light);
+}
+
+
+/* icones */
+.icontray {
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: center;
-    
+    margin-bottom: -2px; 
 }
 
-.icon button {
-    margin: 5px;
-    padding: 2px;
+.icontray .divbutton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-size: 1.0rem;
+    height: 50px;
+    flex: 1;
 }
+
+.icontray > .iconlink {
+
+    flex: 1;
+    align-items: center;
+}
+
+ .iconlink .left {
+    border-bottom-left-radius:  var(--radius);
+}
+
+.iconlink .right {
+    border-bottom-right-radius:  var(--radius);
+}
+
 
 /* ---- Timeline ----- */
 
@@ -370,7 +396,7 @@ nav{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(2px) grayscale(100%) opacity(70%);
+    filter: blur(0px) grayscale(100%) opacity(70%);
     height: 50vh;
     border-radius: var(--radius);
     color: var(--light);
@@ -420,9 +446,20 @@ nav{
 
 
 /* ---- Responsivenes ---- */
+@media (max-width: 410px) {
+    .wrapper {
+        width: 90vw;
+    }
 
+}
 
 @media (max-width: 880px) {
+
+    /* .wrapper {
+        width: 90vw;
+    } */
+
+
 
  /*  MyProjects slider  */
     #projects{
