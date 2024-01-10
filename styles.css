@@ -59,7 +59,7 @@ ul{
 }
 
 
-/* --- header sekcija --- */
+/* --- Header Section --- */
 .header {
     border-bottom: 2px solid var(--gray) ;
     backdrop-filter: var(--blur);
@@ -68,7 +68,7 @@ ul{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
+    padding: 20px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -106,16 +106,72 @@ nav{
     text-decoration: none;
     font-weight: 600;
     margin-left: 40px;
+    width: fit-content;
 }
 
 
-.hamburger-menu {
-    display: none; 
+
+/* --- Hamburger Manu Icon --- */
+
+.hamMenu {
+    position: relative;
+    display: none;
+
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    /* right: 2vw; */
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.hamButton {
+    width: 25px;
+    height: 3px;
+    background: var(--light);
+    border-radius: 2px;
+    transition: all .25s ease-in-out;
+    z-index: 1;
+}
+
+.hamButton::before, 
+.hamButton::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: var(--light);
+    border-radius: 2px;
+    transition: all .25s ease-in-out;
 }
 
 
-/* --- Slajder ---  */  
+.hamButton::before {
+    transform: translateY(-10px);
+}
+
+.hamButton::after {
+    transform: translateY(10px);
+}
+
+.hamMenu.active .hamButton {
+    transform: translateX(-50px);
+    background: transparent;
+}
+
+.hamMenu.active .hamButton:before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.hamMenu.active .hamButton:after {
+    transform: rotate(-45deg) translate(35px, 35px);   
+}
+
+
+
+/* --- Sliding Underline ---  */  
 .navlist a::after {
     content: '';
     position: absolute;
@@ -136,7 +192,7 @@ nav{
 
 
 
-/* --- intro i AboutMe --- */
+/* --- intro and AboutMe --- */
 
 #aboutme {
     scroll-margin-top: 150px;
@@ -165,7 +221,7 @@ nav{
 
 .content-padding {
     display: flex;
-    padding: 30px;
+    padding: 20px 25px 15px 25px;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -199,6 +255,7 @@ nav{
     font-weight: 700;
     /* margin-left: 40px; */
     transition: .5s;
+    padding-top: 3px 
 }
 
 .divbutton:hover {
@@ -222,7 +279,7 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     font-size: 1.0rem;
     height: 50px;
     flex: 1;
@@ -494,6 +551,7 @@ nav{
 
     .timeline ul li .content {
         width: 95%;
+        padding: 0 27px 0 11px;
 
     }
 
@@ -544,8 +602,8 @@ nav{
         gap: .6rem;
     }
 
-    .hamburger-menu {
-        display: block;
+    .hamMenu {
+        display: flex;
 
         z-index: 2;
     }
@@ -566,8 +624,14 @@ nav{
         transition: all 0.15s ease-in-out;
     }
 
+    .header {
+        padding: 20px;
+
+    }
+
     header.active {
-        backdrop-filter:none;
+        backdrop-filter:none; /* this is necessary for the overlay menu to work */
+        
     }   
 
     .nav.active {
