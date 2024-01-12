@@ -10,6 +10,8 @@
     --light: white;
 
     
+    --h1-size: 1.5rem;
+    --p-size: 1.1rem;
 
 
     --blur: blur(20px);
@@ -208,9 +210,9 @@ nav{
     height: auto;
     /* padding: 30px 30px 0 30px; */
     border: 2px solid var(--gray) ;
-    border-radius: var(--radius);
-    /* border-top-left-radius:  var(--radius);
-    border-top-right-radius:  var(--radius); */
+    /* border-radius: var(--radius); */
+    border-top-left-radius:  var(--radius);
+    border-top-right-radius:  var(--radius); 
     display: flex;
     justify-content: center;
     align-content: center;
@@ -272,7 +274,7 @@ nav{
     align-items: center;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: -2px; 
+    margin-top: -2px; 
 }
 
 .icontray .divbutton {
@@ -289,15 +291,89 @@ nav{
 
     flex: 1;
     align-items: center;
+    position: relative;
 }
 
- .iconlink .left {
+/* --- Specific Button Radius --- */
+
+.iconlink .left {
     border-bottom-left-radius:  var(--radius);
 }
 
+
 .iconlink .right {
     border-bottom-right-radius:  var(--radius);
+} 
+
+
+
+
+/* --- Testing Inverted Border Radius --- */
+
+.icontray a.left::after,
+.icontray a.right::after{
+    --border-radius: 1rem;
+
+    content: '';
+    position: absolute;
+    background-color: var(--black);
+    width: var(--border-radius);
+    height: var(--border-radius);
+    border-radius: 100%;
+    transition: .5s;
 }
+
+.icontray a.left::before,
+.icontray a.right::before{
+    --border-radius: 1rem;
+
+    content: '';
+    position: absolute;
+    /* background-color: var(--black); */
+    width: var(--border-radius);
+    height: var(--border-radius);
+    /* border-radius: 100%; */
+    transition: .5s;
+}
+
+.icontray a.left::before {
+    top: -16px;
+    left: 0px;
+    background-color: var(--gray);
+}
+
+.icontray a.left::after{
+    top: -16px;
+    left: 2px;
+    border-radius: 0 0 0 100vw;
+    /* box-shadow: -1px 7px 0px 1px #31363d; */
+}
+
+.icontray a.left:hover::before{
+    background-color: var(--primary);
+    transition: .5s;
+}
+
+
+.icontray a.right::before {
+    top: -16px;
+    left: 85%;
+    background-color: var(--gray);
+}
+
+.icontray a.right::after{
+    top: -16px;
+    left: 84%;
+    border-radius: 0 0 100vw 0;
+    /* box-shadow: -1px 7px 0px 1px #31363d; */
+}
+
+.icontray a.right:hover::before,
+.icontray a.left:hover::before{
+    background-color: var(--primary);
+    transition: .5s;
+}
+
 
 
 /* ---- Timeline ----- */
