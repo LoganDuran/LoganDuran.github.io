@@ -439,7 +439,7 @@ nav{
     padding: 10px 20px;
     background-color: var(--gray);
     margin-top: 0;
-    text-align: center;
+    /* text-align: center; */
     border-bottom-left-radius: var(--radius);
     border-bottom-right-radius: var(--radius);
 }
@@ -473,11 +473,13 @@ nav{
 #techstack {
     scroll-margin-top: 80px;
     width: 100%;
-    height: auto;
-    padding: 10px 0 10px 0;
+    height: 100vh;
+    min-height: 670px;
+    padding-top: 10px;
+    /* padding: 10px 0 10px 0; */
     /* background: rgb(108, 32, 249); */
     border-top: 2px solid;
-    border-bottom: 2px solid;
+    /* border-bottom: 2px solid; */
     border-color: var(--gray);
 }
 
@@ -495,7 +497,9 @@ nav{
 }
 
 .tabs {
-    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: var(--gray);
     margin: 5px;
     width: 90%;
@@ -509,6 +513,32 @@ nav{
     transition: .4s;
 }
 
+#techstack > div > iconify-icon {
+    width: 100% ;
+}
+
+#techstack > div > div:nth-child(8),
+#techstack > div > div:nth-child(9) {
+    opacity: 0.5;
+}
+
+#techstack > div > div:nth-child(8):hover,
+#techstack > div > div:nth-child(9):hover {
+    background: var(--gray);
+}
+
+.textbubble {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px solid var(--gray) ;
+    border-radius: var(--radius);
+
+}
+
+
+
 
 /* --- MyProjects --- */
 
@@ -518,7 +548,8 @@ nav{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 500px;
+    height: 100vh;
+    min-height: 600px;
     border-top: 2px solid;
     border-color: var(--gray);
 }
@@ -574,8 +605,11 @@ nav{
     scroll-margin-top: 80px;
     display: inline-block;
     width: 100%;
-    height: 700px;
+    height: 100vh;
     /* background: aqua; */
+    border-top: 2px solid;
+    /* border-bottom: 2px solid; */
+    border-color: var(--gray);
 }
 
 
@@ -639,12 +673,18 @@ nav{
 
       /* MyTackStack Responsivenes*/
 
+    #techstack {
+        min-height: 1050px;
+
+    }
+
    .tab-wrapper {
        grid-template-columns: 180px 180px ;
-       grid-template-rows: 150px 150px 150px 150px;
+       grid-template-rows: 150px 150px 150px 150px 150px;
             
         
     }
+
 
 
 
