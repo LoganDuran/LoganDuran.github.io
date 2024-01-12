@@ -202,11 +202,11 @@ nav{
     align-items: center;
     flex-direction: column;
     justify-content: flex-end;
-    /* width: 90vw; */
+    width: 320px;
 }
 
 .wrapper {
-    width: 320px;
+    width: 100%;
     height: auto;
     /* padding: 30px 30px 0 30px; */
     border: 2px solid var(--gray) ;
@@ -289,9 +289,11 @@ nav{
 
 .icontray > .iconlink {
 
-    flex: 1;
+    /* flex: 1; */
     align-items: center;
     position: relative;
+    width: 100%;
+
 }
 
 /* --- Specific Button Radius --- */
@@ -321,6 +323,7 @@ nav{
     height: var(--border-radius);
     border-radius: 100%;
     transition: .5s;
+    pointer-events:none;
 }
 
 .icontray a.left::before,
@@ -334,10 +337,11 @@ nav{
     height: var(--border-radius);
     /* border-radius: 100%; */
     transition: .5s;
+    pointer-events:none;
 }
 
 .icontray a.left::before {
-    top: -16px;
+    top: -15px;
     left: 0px;
     background-color: var(--gray);
 }
@@ -356,14 +360,14 @@ nav{
 
 
 .icontray a.right::before {
-    top: -16px;
+    top: -15px;
     left: 85%;
     background-color: var(--gray);
 }
 
 .icontray a.right::after{
     top: -16px;
-    left: 84%;
+    left: 83%;
     border-radius: 0 0 100vw 0;
     /* box-shadow: -1px 7px 0px 1px #31363d; */
 }
@@ -372,6 +376,7 @@ nav{
 .icontray a.left:hover::before{
     background-color: var(--primary);
     transition: .5s;
+    
 }
 
 
@@ -423,7 +428,7 @@ nav{
 }
 
 
-/* --- :hover exect for time line --- */
+/* --- :hover effect for time line --- */
 
 /* .timeline ul li .content :hover{
     background-color: var(--primary);
@@ -583,7 +588,7 @@ nav{
 @media (max-width: 410px) {
    
    /* --- AboutMe --- */
-    .wrapper {
+    #aboutme{
         width: 90vw;
     }
 
