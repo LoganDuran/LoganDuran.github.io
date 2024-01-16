@@ -60,6 +60,14 @@ ul{
     list-style: none;
 }
 
+h1, h2 {
+    font-size: 1.5em;
+}
+
+p {
+    font-size: 0.9rem;
+}
+
 
 /* --- Header Section --- */
 .header {
@@ -89,7 +97,7 @@ ul{
 .logo span {
     color:  var(--primary);
     font-family: Righteous;
-
+    /* padding-left: 1px; */
 }
 
 nav{
@@ -218,6 +226,8 @@ nav{
     align-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    text-align: center;
+
 
 }
 
@@ -236,10 +246,6 @@ nav{
     height: 150px;
     border-radius: 50%;
     box-shadow: 0 0 30px var(--gray);
-}
-
-.avatar p {
-    margin: 6px;
 }
 
 
@@ -428,7 +434,7 @@ nav{
 }
 
 
-/* --- :hover effect for time line --- */
+/* --- :hover effect for timeline --- */
 
 /* .timeline ul li .content :hover{
     background-color: var(--primary);
@@ -488,7 +494,18 @@ nav{
 .tab-wrapper {
     display: grid;
     grid-template-columns: 180px 180px 180px;
-    grid-template-rows: 150px 150px 150px;
+    grid-template-rows: 150px 150px;
+    align-content: center;
+    justify-content: center;
+    align-items: baseline;
+    justify-items: center;
+
+}
+
+.tab-wrapper2 {
+    display: grid;
+    grid-template-columns: 180px 180px 180px;
+    grid-template-rows: 150px;
     align-content: center;
     justify-content: center;
     align-items: baseline;
@@ -623,7 +640,7 @@ nav{
    
    /* --- AboutMe --- */
     #aboutme{
-        width: 90vw;
+        /* width: 90vw; */
     }
 
     /* ---- Timeline ----- */
