@@ -493,35 +493,20 @@ nav{
 
 .tab-wrapper {
     display: grid;
-    grid-template-columns: 180px 180px 180px;
-    grid-template-rows: 150px 150px;
-    align-content: center;
+    gap: 1rem;
+    grid-template-columns:  180px 180px 180px;
     justify-content: center;
-    align-items: baseline;
-    justify-items: center;
 
-}
-
-.tab-wrapper2 {
-    display: grid;
-    grid-template-columns: 180px 180px 180px;
-    grid-template-rows: 150px;
-    align-content: center;
-    justify-content: center;
-    align-items: baseline;
-    justify-items: center;
 
 }
 
 .tabs {
-    display: flex;
+    display: grid;
+    grid-template-rows: 150px; 
     justify-content: center;
     align-items: center;
     background: var(--gray);
-    margin: 5px;
-    width: 90%;
-    height: 90%;
-    border-radius: 10px;
+    border-radius: var(--radius);
 }
 
 .tabs:hover {
@@ -530,19 +515,7 @@ nav{
     transition: .4s;
 }
 
-#techstack > div > iconify-icon {
-    width: 100% ;
-}
 
-#techstack > div > div:nth-child(8),
-#techstack > div > div:nth-child(9) {
-    opacity: 0.5;
-}
-
-#techstack > div > div:nth-child(8):hover,
-#techstack > div > div:nth-child(9):hover {
-    background: var(--gray);
-}
 
 .textbubble {
     width: 100%;
@@ -580,10 +553,13 @@ nav{
 }
 
 .panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(0px) grayscale(100%) opacity(70%);
+    filter: blur(0px) grayscale(100%) opacity(40%);
     height: 50vh;
     border-radius: var(--radius);
     color: var(--light);
@@ -595,7 +571,7 @@ nav{
 }
 
 .panel h3 {
-    font-size: 24px;
+    font-size: 1.6rem;
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -613,6 +589,11 @@ nav{
 .panel.active p {
     opacity: 1;
     transition: opacity 0.3s ease-in o.4s;
+}
+
+.panel p {
+    
+
 }
 
 
@@ -636,19 +617,6 @@ nav{
 
 
 /* ---- Responsivenes ---- */
-@media (max-width: 410px) {
-   
-   /* --- AboutMe --- */
-    #aboutme{
-        /* width: 90vw; */
-    }
-
-    /* ---- Timeline ----- */
-
-    .timeline {
-       width: 100%; 
-    }
-}
 
 @media (max-width: 880px) {
 
@@ -692,14 +660,10 @@ nav{
 
     #techstack {
         min-height: 1050px;
-
     }
 
-   .tab-wrapper {
-       grid-template-columns: 180px 180px ;
-       grid-template-rows: 150px 150px 150px 150px 150px;
-            
-        
+    .tab-wrapper {
+        grid-template-columns:  180px 180px;
     }
 
 
@@ -794,3 +758,36 @@ nav{
 
 
 }
+
+
+
+@media (max-width: 410px) {
+   
+    /* --- AboutMe --- */
+     #aboutme{
+         /* width: 90vw; */
+     }
+ 
+     /* ---- Timeline ----- */
+ 
+     .timeline {
+        width: 100%; 
+     }
+ 
+ 
+     /* --- MyTackStack --- */
+ 
+     #techstack {
+         min-height: 1050px;
+     }
+ 
+     .tab-wrapper {
+         grid-template-columns:  140px 140px;
+     }
+ 
+     .tabs {
+         grid-template-rows: 110px; 
+ 
+     }
+ 
+ }
