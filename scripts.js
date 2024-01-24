@@ -14,7 +14,7 @@ hamburgerMenu.addEventListener("click", () => {
 navLinks.forEach((navLink) => {
     navLink.addEventListener("click", () => {
         [header, nav, hamburgerMenu].forEach(section => section.classList.remove("active")) 
-    })
+    });
 });
 
 
