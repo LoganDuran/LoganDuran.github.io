@@ -3,36 +3,19 @@
 const hamburgerMenu = document.querySelector(".hamMenu");
 const nav = document.querySelector(".nav");
 const header = document.querySelector(".header");
-// const navLinks = document.querySelector(".navlinks");
+const navLinks = document.querySelectorAll(".navlinks");
 
 
 hamburgerMenu.addEventListener("click", () => {
-    hamburgerMenu.classList.toggle("active")
-});
-
-hamburgerMenu.addEventListener("click", () => {
-    nav.classList.toggle("active")
-});
-
-hamburgerMenu.addEventListener("click", () => {
-    header.classList.toggle("active")
+    [header, nav, hamburgerMenu].forEach(section => section.classList.toggle("active"))
 });
 
 
-// closing the header on anchor tags 
-
-// navLinks.addEventListener("click", () => {
-//     hamburgerMenu.classList.remove("active")
-// });
-
-// navLinks.addEventListener("click", () => {
-//     header.classList.remove("active")
-// });
-
-// navLinks.addEventListener("click", () => {
-//     nav.classList.remove("active")
-// });
-
+navLinks.forEach((navLink) => {
+    navLink.addEventListener("click", () => {
+        [header, nav, hamburgerMenu].forEach(section => section.classList.remove("active")) 
+    })
+});
 
 
 

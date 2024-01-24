@@ -591,10 +591,6 @@ nav{
     transition: opacity 0.3s ease-in o.4s;
 }
 
-.panel p {
-    
-
-}
 
 
 /* --- Contact --- */
@@ -764,9 +760,7 @@ nav{
 @media (max-width: 410px) {
    
     /* --- AboutMe --- */
-     #aboutme{
-         /* width: 90vw; */
-     }
+
  
      /* ---- Timeline ----- */
  
