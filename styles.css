@@ -518,6 +518,7 @@ nav{
     height: 100vh;
     min-height: 600px;
     border-top: 2px solid;
+    border-bottom: 2px solid;
     border-color: var(--gray);
 }
 
@@ -573,14 +574,65 @@ nav{
 
 #contact {
     scroll-margin-top: 80px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
-    height: 100vh;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-    border-color: var(--gray);
+    min-height: 500px;
+    padding-top: 50px;
 }
 
+.contact-wrapper {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+
+.contact-form {
+    border: 2px solid var(--gray) ;
+    border-top-left-radius:  var(--radius);
+    border-top-right-radius:  var(--radius); 
+    padding: 20px
+}
+
+
+
+.contact-inputs {
+    scroll-margin-top: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 320px;
+}
+
+
+
+.contact-button {
+    width: 100%;
+    height: 45px;
+    background: var(--gray);
+    border: 2px solid var(--gray);
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--light);
+    font-weight: 700;
+    transition: .5s;
+    padding-top: 3px 
+}
+
+.contact-button:hover{
+    background: var(--primary);
+    border: 2px solid var(--primary);
+    color: var(--light);
+}
 
 
 
@@ -650,7 +702,7 @@ nav{
         height: 40vh;
     }
 
-    
+
 
     /* Main and Header */
 
