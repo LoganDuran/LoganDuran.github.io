@@ -576,47 +576,75 @@ nav{
     scroll-margin-top: 80px;
     display: flex;
     align-items: center;
-    flex-direction: column;
     width: 100%;
-    min-height: 500px;
-    padding-top: 50px;
+    min-height: 700px;
 }
 
 .contact-wrapper {
     width: 100%;
-    height: 500px;
     display: flex;
     justify-content: center;
     align-content: center;
-    flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
 }
 
 
 .contact-form {
+    max-width: 640px;
     border: 2px solid var(--gray) ;
     border-top-left-radius:  var(--radius);
     border-top-right-radius:  var(--radius); 
+    border-radius: var(--radius);
     padding: 20px
+}
+
+.contact-form form label {
+    display: flex;
+    align-items: flex-start;
+    padding: 0px 0px 5px 15px;
+
 }
 
 
 
-.contact-inputs {
+.contact-inputs input {
     scroll-margin-top: 150px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: flex-end;
-    width: 320px;
+    width: auto;
 }
 
+.contact-inputs input, textarea {
 
+    height: 30px;
+    width: 300px;
+    background-color: var(--gray);
+
+    border: none;
+    outline: none;
+    border-radius: var(--radius);
+    padding: 0 10px 0 10px ;
+    margin: 0 15px 15px 15px;
+}
+
+.contact-inputs textarea {
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    max-width: 565px;
+
+}
 
 .contact-button {
-    width: 100%;
-    height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 150px;
     background: var(--gray);
     border: 2px solid var(--gray);
     outline: none;
@@ -625,17 +653,33 @@ nav{
     color: var(--light);
     font-weight: 700;
     transition: .5s;
-    padding-top: 3px 
+    border-radius: var(--radius);
+    margin: 0 10px 10px 10px;
 }
+
+.contact-buttons button {
+    margin: 0 10px 0 10px;
+
+}
+
+.contact-buttons ion-icon{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+
+.contact-buttons iconify-icon {
+    width: auto;
+    height: auto;
+    padding: 10px;
+}
+
 
 .contact-button:hover{
     background: var(--primary);
     border: 2px solid var(--primary);
     color: var(--light);
 }
-
-
-
 
 
 
