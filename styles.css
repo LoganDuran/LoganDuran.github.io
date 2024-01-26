@@ -575,6 +575,7 @@ nav{
 #contact {
     scroll-margin-top: 80px;
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
     min-height: 700px;
@@ -593,8 +594,6 @@ nav{
 .contact-form {
     max-width: 640px;
     border: 2px solid var(--gray) ;
-    border-top-left-radius:  var(--radius);
-    border-top-right-radius:  var(--radius); 
     border-radius: var(--radius);
     padding: 20px
 }
@@ -682,10 +681,137 @@ nav{
 }
 
 
+/* ContactMe Responsivenes */
+
+
+@media (max-width: 1080px) {
+
+    /* ContactMe Section */
+    .contact-wrapper {
+        flex-direction: column;
+        width: auto;
+
+    }
+
+
+    .contact-form {
+        border-radius: 0;
+        border-top-left-radius:  var(--radius);
+        border-top-right-radius:  var(--radius); 
+
+    }
+
+
+    div.contact-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+
+    }
+
+    .contact-link {
+        width: 100%;
+    }
+
+
+    div.contact-button,
+    button.contact-button {
+        border-radius: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .contact-lin .contact-button .left {
+        border-bottom-left-radius:  var(--radius);
+    }
+    
+    .contact-lin .contact-button .right{
+        border-bottom-right-radius:  var(--radius);
+    } 
+
+
+
+
+/* --- Inverted Border Radius --- */
+
+.icontray a.left::after,
+.icontray a.right::after{
+    --border-radius: 1rem;
+
+    content: '';
+    position: absolute;
+    background-color: var(--black);
+    width: var(--border-radius);
+    height: var(--border-radius);
+    border-radius: 100%;
+    transition: .5s;
+    pointer-events:none;
+}
+
+.icontray a.left::before,
+.icontray a.right::before{
+    --border-radius: 1rem;
+
+    content: '';
+    position: absolute;
+    width: var(--border-radius);
+    height: var(--border-radius);
+    transition: .5s;
+    pointer-events:none;
+}
+
+.icontray a.left::before {
+    top: -15px;
+    left: 0px;
+    background-color: var(--gray);
+}
+
+.icontray a.left::after{
+    top: -16px;
+    left: 2px;
+    border-radius: 0 0 0 100vw;
+}
+
+.icontray a.left:hover::before{
+    background-color: var(--primary);
+    transition: .5s;
+}
+
+
+.icontray a.right::before {
+    top: -15px;
+    left: 85%;
+    background-color: var(--gray);
+}
+
+.icontray a.right::after{
+    top: -16px;
+    left: 83%;
+    border-radius: 0 0 100vw 0;
+}
+
+.icontray a.right:hover::before,
+.icontray a.left:hover::before{
+    background-color: var(--primary);
+    transition: .5s;
+    
+}
+
+
+
+
+
+
+
+
+}
 
 /* ---- Responsivenes ---- */
 
 @media (max-width: 880px) {
+
 
     /* Timeline Responsivenes */
 
