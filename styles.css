@@ -266,7 +266,9 @@ nav{
 }
 
 
+
 /* --- icones --- */
+
 .icontray {
     width: 100%;
     display: flex;
@@ -294,17 +296,17 @@ nav{
 
 }
 
+
+
 /* --- Specific Button Radius --- */
 
 .iconlink .left {
     border-bottom-left-radius:  var(--radius);
 }
 
-
 .iconlink .right {
     border-bottom-right-radius:  var(--radius);
 } 
-
 
 
 
@@ -346,11 +348,6 @@ nav{
     top: -16px;
     left: 2px;
     border-radius: 0 0 0 100vw;
-}
-
-.icontray a.left:hover::before{
-    background-color: var(--primary);
-    transition: .5s;
 }
 
 
@@ -698,20 +695,21 @@ nav{
         border-radius: 0;
         border-top-left-radius:  var(--radius);
         border-top-right-radius:  var(--radius); 
+        border-bottom: none;
 
     }
 
 
-    div.contact-buttons {
+    .contact-buttons {
         display: flex;
         flex-direction: row;
         justify-content: center;
         flex-wrap: nowrap;
-
     }
 
     .contact-link {
         width: 100%;
+        position: relative;
     }
 
 
@@ -723,13 +721,13 @@ nav{
         height: 100%;
     }
 
-    .contact-link .left {
+    .contact-buttons a:nth-child(1) .left {
         border-bottom-left-radius:  var(--radius);
     }
     
-    .contact-link .right{
+    .contact-buttons a:nth-child(3) .right {
         border-bottom-right-radius:  var(--radius);
-    } 
+     } 
 
     .contact-button ion-icon{
         width: 45px;
@@ -737,10 +735,14 @@ nav{
         padding: 5px;
     }
 
+
+
+
+
     /* --- Inverted Border Radius --- */
 
-    .contact-buttons .contact-link.left::after,
-    .contact-buttons .contact-link.right::after{
+    .contact-buttons .left::after,
+    .contact-buttons .right::after{
         --border-radius: 1rem;
 
         content: '';
@@ -753,50 +755,44 @@ nav{
         pointer-events:none;
     }
 
-    .contact-buttons .contact-link.left::before,
-    .contact-buttons .contact-link.right::before{
+    .contact-buttons .left::before,
+    .contact-buttons .right::before{
         --border-radius: 1rem;
 
         content: '';
         position: absolute;
+        background-color: var(--gray);
         width: var(--border-radius);
         height: var(--border-radius);
         transition: .5s;
         pointer-events:none;
     }
 
-    .icontray a.left::before {
-        top: -15px;
+    .contact-buttons .left::before {
+        top: -14px;
         left: 0px;
-        background-color: var(--gray);
     }
 
-    .icontray a.left::after{
+    .contact-buttons .left::after{
         top: -16px;
         left: 2px;
         border-radius: 0 0 0 100vw;
     }
 
-    .icontray a.left:hover::before{
-        background-color: var(--primary);
-        transition: .5s;
+
+    .contact-buttons .right::before {
+        top: -14px;
+        left: 86%;
     }
 
-
-    .icontray a.right::before {
-        top: -15px;
-        left: 85%;
-        background-color: var(--gray);
-    }
-
-    .icontray a.right::after{
+    .contact-buttons .right::after{
         top: -16px;
-        left: 83%;
+        left: 85%;
         border-radius: 0 0 100vw 0;
     }
 
-    .icontray a.right:hover::before,
-    .icontray a.left:hover::before{
+    .contact-buttons .right:hover::before,
+    .contact-buttons .left:hover::before{
         background-color: var(--primary);
         transition: .5s;
         
