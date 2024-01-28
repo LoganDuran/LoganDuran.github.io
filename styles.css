@@ -198,6 +198,31 @@ nav{
 }
 
 
+/* --- Footer Section ---  */  
+
+
+footer {
+    border-top: 2px solid var(--gray);
+    box-shadow: var(--shadow);
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    user-select: none;
+}
+
+footer .logo-bottom {
+    font-size: 1.2rem;
+    font-family: Righteous;
+    color:  var(--light);
+    cursor: pointer;
+}
+
+footer .logo-bottom span {
+    color:  var(--primary);
+    font-family: Righteous;
+}
+
 
 /* --- intro and AboutMe --- */
 
