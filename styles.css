@@ -1,994 +1,917 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Righteous&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Righteous&display=swap");
 
 :root {
-    --primary:  rgb(151, 136, 166);
-    --black: #0d1117;
-    --gray: #30363d;
-    --light: white;
+  --primary: rgb(151, 136, 166);
+  --black: #0d1117;
+  --gray: #30363d;
+  --light: white;
 
-    
-    --h1-size: 1.5rem;
-    --p-size: 1.1rem;
+  --h1-size: 1.5rem;
+  --p-size: 1.1rem;
 
+  --blur: blur(20px);
+  --shadow: 0 0 30px var(--gray);
 
-    --blur: blur(20px);
-    --shadow: 0 0 30px var(--gray);
-
-    --radius: 1.0rem;
-
+  --radius: 1rem;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-
 * {
-    margin: 0;
-    padding: 0;
-    
-    box-sizing: border-box;
-    font-family: 'Comfortaa';
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  font-family: "Comfortaa";
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: var(--black);
-    color: var(--light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--black);
+  color: var(--light);
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50vw;
-    padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
-h1, h2 {
-    font-size: 1.5em;
+h1,
+h2 {
+  font-size: 1.5em;
 }
 
 p {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
-
 
 /* --- Header Section --- */
 .header {
-    border-bottom: 2px solid var(--gray) ;
-    backdrop-filter: var(--blur);
-    box-shadow: var(--shadow);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 9;
+  border-bottom: 2px solid var(--gray);
+  backdrop-filter: var(--blur);
+  box-shadow: var(--shadow);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9;
 }
 
 .logo {
-    font-size: 2rem;
-    font-family: Righteous;
-    font-weight: bold;
-    color:  var(--light);
-    user-select: none;
-    cursor: pointer;
+  font-size: 2rem;
+  font-family: Righteous;
+  font-weight: bold;
+  color: var(--light);
+  user-select: none;
+  cursor: pointer;
 }
 
 .logo span {
-    color:  var(--primary);
-    font-family: Righteous;
+  color: var(--primary);
+  font-family: Righteous;
 }
 
-nav{
-    display: flex;
-    align-items: center;
+nav {
+  display: flex;
+  align-items: center;
 }
 
 .navlist {
-    display: flex;
+  display: flex;
 }
 
 .navlist a {
-    position: relative;
-    font-size: 1.1rem;
-    color: var(--light);
-    text-decoration: none;
-    font-weight: 600;
-    margin-left: 40px;
-    width: fit-content;
+  position: relative;
+  font-size: 1.1rem;
+  color: var(--light);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 40px;
+  width: fit-content;
 }
-
-
 
 /* --- Hamburger Manu Icon --- */
 
 .hamMenu {
-    position: relative;
-    display: none;
+  position: relative;
+  display: none;
 
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
 
 .hamButton {
-    width: 25px;
-    height: 3px;
-    background: var(--light);
-    border-radius: 2px;
-    transition: all .25s ease-in-out;
-    z-index: 1;
+  width: 25px;
+  height: 3px;
+  background: var(--light);
+  border-radius: 2px;
+  transition: all 0.25s ease-in-out;
+  z-index: 1;
 }
 
-.hamButton::before, 
+.hamButton::before,
 .hamButton::after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 3px;
-    background: var(--light);
-    border-radius: 2px;
-    transition: all .25s ease-in-out;
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background: var(--light);
+  border-radius: 2px;
+  transition: all 0.25s ease-in-out;
 }
-
 
 .hamButton::before {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 .hamButton::after {
-    transform: translateY(10px);
+  transform: translateY(10px);
 }
 
 .hamMenu.active .hamButton {
-    transform: translateX(-50px);
-    background: transparent;
+  transform: translateX(-50px);
+  background: transparent;
 }
 
 .hamMenu.active .hamButton:before {
-    transform: rotate(45deg) translate(35px, -35px);
+  transform: rotate(45deg) translate(35px, -35px);
 }
 
 .hamMenu.active .hamButton:after {
-    transform: rotate(-45deg) translate(35px, 35px);   
+  transform: rotate(-45deg) translate(35px, 35px);
 }
 
-
-
-/* --- Sliding Underline ---  */  
+/* --- Sliding Underline ---  */
 .navlist a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 100%;
-    height: 3px;
-    background: var(--primary);
-    border-radius: 5px;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .5s;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
 }
 .navlist a:hover::after {
-    transform-origin: left;
-    transform: scaleX(1);
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
-
-/* --- Footer Section ---  */  
-
+/* --- Footer Section ---  */
 
 footer {
-    border-top: 2px solid var(--gray);
-    box-shadow: var(--shadow);
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-    padding: 20px;
-    user-select: none;
+  border-top: 2px solid var(--gray);
+  box-shadow: var(--shadow);
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  user-select: none;
 }
 
 footer .logo-bottom {
-    font-size: 1.2rem;
-    font-family: Righteous;
-    color:  var(--light);
-    cursor: pointer;
+  font-size: 1.2rem;
+  font-family: Righteous;
+  color: var(--light);
+  cursor: pointer;
 }
 
 footer .logo-bottom span {
-    color:  var(--primary);
-    font-family: Righteous;
+  color: var(--primary);
+  font-family: Righteous;
 }
-
 
 /* --- intro and AboutMe --- */
 
 #aboutme {
-    scroll-margin-top: 150px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 320px;
+  scroll-margin-top: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 320px;
 }
 
 .wrapper {
-    width: 100%;
-    height: auto;
-    border: 2px solid var(--gray) ;
-    border-top-left-radius:  var(--radius);
-    border-top-right-radius:  var(--radius); 
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: center;
-
-
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--gray);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .content-padding {
-    display: flex;
-    padding: 20px 25px 15px 25px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-
+  display: flex;
+  padding: 20px 25px 15px 25px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .avatar {
-    margin: 20px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    box-shadow: 0 0 30px var(--gray);
+  margin: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px var(--gray);
 }
-
 
 /* --- Buttons --- */
 .divbutton {
-    width: 100%;
-    height: 45px;
-    background: var(--gray);
-    border: 2px solid var(--gray);
-    outline: none;
-    cursor: pointer;
-    font-size: 1.1rem;
-    color: var(--light);
-    font-weight: 700;
-    transition: .5s;
-    padding-top: 3px 
+  width: 100%;
+  height: 45px;
+  background: var(--gray);
+  border: 2px solid var(--gray);
+  outline: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: var(--light);
+  font-weight: 700;
+  transition: 0.5s;
+  padding-top: 3px;
 }
 
 .divbutton:hover {
-    background: var(--primary);
-    border: 2px solid var(--primary);
-    color: var(--light);
+  background: var(--primary);
+  border: 2px solid var(--primary);
+  color: var(--light);
 }
-
-
 
 /* --- icones --- */
 
 .icontray {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: -2px; 
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: -2px;
 }
 
 .icontray .divbutton {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    font-size: 1.0rem;
-    height: 50px;
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1rem;
+  height: 50px;
+  flex: 1;
 }
 
 .icontray > .iconlink {
-
-    align-items: center;
-    position: relative;
-    width: 100%;
-
+  align-items: center;
+  position: relative;
+  width: 100%;
 }
-
-
 
 /* --- Specific Button Radius --- */
 
 .iconlink .left {
-    border-bottom-left-radius:  var(--radius);
+  border-bottom-left-radius: var(--radius);
 }
 
 .iconlink .right {
-    border-bottom-right-radius:  var(--radius);
-} 
-
-
+  border-bottom-right-radius: var(--radius);
+}
 
 /* --- Inverted Border Radius --- */
 
 .icontray a.left::after,
-.icontray a.right::after{
-    --border-radius: 1rem;
+.icontray a.right::after {
+  --border-radius: 1rem;
 
-    content: '';
-    position: absolute;
-    background-color: var(--black);
-    width: var(--border-radius);
-    height: var(--border-radius);
-    border-radius: 100%;
-    transition: .5s;
-    pointer-events:none;
+  content: "";
+  position: absolute;
+  background-color: var(--black);
+  width: var(--border-radius);
+  height: var(--border-radius);
+  border-radius: 100%;
+  transition: 0.5s;
+  pointer-events: none;
 }
 
 .icontray a.left::before,
-.icontray a.right::before{
-    --border-radius: 1rem;
+.icontray a.right::before {
+  --border-radius: 1rem;
 
-    content: '';
-    position: absolute;
-    width: var(--border-radius);
-    height: var(--border-radius);
-    transition: .5s;
-    pointer-events:none;
+  content: "";
+  position: absolute;
+  width: var(--border-radius);
+  height: var(--border-radius);
+  transition: 0.5s;
+  pointer-events: none;
 }
 
 .icontray a.left::before {
-    top: -15px;
-    left: 0px;
-    background-color: var(--gray);
+  top: -15px;
+  left: 0px;
+  background-color: var(--gray);
 }
 
-.icontray a.left::after{
-    top: -16px;
-    left: 2px;
-    border-radius: 0 0 0 100vw;
+.icontray a.left::after {
+  top: -16px;
+  left: 2px;
+  border-radius: 0 0 0 100vw;
 }
-
 
 .icontray a.right::before {
-    top: -15px;
-    left: 85%;
-    background-color: var(--gray);
+  top: -15px;
+  right: 0px;
+  background-color: var(--gray);
 }
 
-.icontray a.right::after{
-    top: -16px;
-    left: 83%;
-    border-radius: 0 0 100vw 0;
+.icontray a.right::after {
+  top: -16px;
+  right: 2px;
+  border-radius: 0 0 100vw 0;
 }
 
 .icontray a.right:hover::before,
-.icontray a.left:hover::before{
-    background-color: var(--primary);
-    transition: .5s;
-    
+.icontray a.left:hover::before {
+  background-color: var(--primary);
+  transition: 0.5s;
 }
-
-
 
 /* ---- Timeline ----- */
 
 .timeline {
-    position: relative;
-    margin: 55px auto;
-    width: 80%;
-    
+  position: relative;
+  margin: 55px auto;
+  max-width: 660px;
 }
 .timeline ul li {
-    margin-bottom: 50px;
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  margin-bottom: 50px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .point {
-    min-width: 20px;
-    height: 20px;
-    background-color: var(--black);
-    border-radius: 100%;
-    z-index: 2;
-    border: 3px var(--gray) solid;
-    position: relative;
+  min-width: 20px;
+  height: 20px;
+  background-color: var(--black);
+  border-radius: 100%;
+  z-index: 2;
+  border: 3px var(--gray) solid;
+  position: relative;
 }
 .point.point-right {
-    right: 9px;
+  right: 9px;
 }
 
 .point.point-left {
-    left: 11px;
+  left: 11px;
 }
 
 .timeline ul li .content {
-    width: 50%;
-    padding: 0 20px;
+  width: 50%;
+  padding: 0 20px;
 }
 
 .timeline ul li .content h3 {
-    padding: 10px 20px;
-    background-color: var(--gray);
-    margin-bottom: 0;
-    text-align: center;
-    border-top-left-radius: var(--radius);
-    border-top-right-radius: var(--radius);
+  padding-top: 12px;
+  background-color: var(--gray);
+  margin-bottom: 0;
+  text-align: center;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
 }
-
 
 .timeline ul li .content p {
-    padding: 10px 20px;
-    background-color: var(--gray);
-    margin-top: 0;
-    border-bottom-left-radius: var(--radius);
-    border-bottom-right-radius: var(--radius);
+  padding: 8px 20px 15px 20px;
+  background-color: var(--gray);
+  margin-top: 0;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
 }
 .timeline ul li:nth-child(even) {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .timeline::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 3px;
-    left: 50%;
-    background-color: var(--gray);
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  left: 50%;
+  background-color: var(--gray);
 }
-
-
-
-
 
 /* --- MyTechStack --- */
 
 .chapter {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
-
-
 
 #techstack {
-    scroll-margin-top: 80px;
-    width: 100%;
-    height: 100vh;
-    min-height: 670px;
-    padding-top: 10px;
-    border-top: 2px solid;
-    border-color: var(--gray);
+  scroll-margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  min-height: 670px;
+  padding-top: 10px;
+  border-top: 2px solid;
+  border-color: var(--gray);
 }
 
-
-
 .tab-wrapper {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns:  180px 180px 180px;
-    justify-content: center;
-
-
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 180px 180px 180px;
+  justify-content: center;
 }
 
 .tabs {
-    display: grid;
-    grid-template-rows: 150px; 
-    justify-content: center;
-    align-items: center;
-    background: var(--gray);
-    border-radius: var(--radius);
+  display: grid;
+  grid-template-rows: 150px;
+  justify-content: center;
+  align-items: center;
+  background: var(--gray);
+  border-radius: var(--radius);
 }
 
 .tabs:hover {
-    background: var(--primary);
-    color: var(--light);
-    transition: .4s;
+  background: var(--primary);
+  color: var(--light);
+  transition: 0.4s;
 }
-
-
 
 .textbubble {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    margin: 20px 0;
-    border: 2px solid var(--gray) ;
-    border-radius: var(--radius);
-
+  max-width: 660px;
+  height: auto;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid var(--gray);
+  border-radius: var(--radius);
 }
-
-
-
 
 /* --- MyProjects --- */
 
 #projects {
-    scroll-margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    min-height: 600px;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-    border-color: var(--gray);
+  scroll-margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-color: var(--gray);
 }
 
-
 .container {
-    display: flex;
-    flex-direction: row;
-    width: 50vw;
-    height: 25vh;
+  display: flex;
+  flex-direction: row;
+  width: 50vw;
+  height: 25vh;
 }
 
 .panel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: blur(0px) grayscale(100%) opacity(40%);
-    height: 50vh;
-    border-radius: var(--radius);
-    color: var(--light);
-    flex: 0.5;
-    margin: 10px;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.7s  ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(0px) grayscale(100%) opacity(40%);
+  height: 50vh;
+  border-radius: var(--radius);
+  color: var(--light);
+  flex: 0.5;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.7s ease-in;
 }
 
 .panel h3 {
-    font-size: 1.6rem;
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    margin: 0;
-    opacity: 0;
+  font-size: 1.6rem;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
 }
 
 .panel.active {
-    flex: 6;
-    filter: none;
+  flex: 6;
+  filter: none;
 }
 
 .panel.active h3,
 .panel.active p {
-    opacity: 1;
-    transition: opacity 0.3s ease-in o.4s;
+  opacity: 1;
+  transition: opacity 0.3s ease-in o.4s;
 }
-
-
 
 /* --- Contact --- */
 
 #contact {
-    scroll-margin-top: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 700px;
+  scroll-margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 700px;
 }
 
 .contact-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 10px;
 }
 
-
 .contact-form {
-    max-width: 640px;
-    border: 2px solid var(--gray) ;
-    border-radius: var(--radius);
-    padding: 20px
+  width: 374px;
+  border: 2px solid var(--gray);
+  border-radius: var(--radius);
+  padding: 20px;
 }
 
 .contact-form form label {
-    display: flex;
-    align-items: flex-start;
-    padding: 0px 0px 5px 15px;
-
+  display: flex;
+  align-items: flex-start;
+  padding: 0px 0px 5px 15px;
 }
-
-
 
 .contact-inputs input {
-    scroll-margin-top: 150px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: auto;
+  scroll-margin-top: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: auto;
 }
 
-.contact-inputs input, 
+.contact-inputs input,
 .contact-inputs textarea {
-    height: 30px;
-    width: 300px;
-    background-color: var(--gray);
-    color: var(--light);
-    border: none;
-    outline: none;
-    border-radius: var(--radius);
-    padding: 0 10px 0 10px ;
-    margin: 0 15px 15px 15px;
+  height: 30px;
+  width: 90%;
+  background-color: var(--gray);
+  color: var(--light);
+  border: none;
+  outline: none;
+  border-radius: var(--radius);
+  padding: 0 10px 0 10px;
+  margin: 0 15px 15px 15px;
 }
 
 .contact-inputs textarea {
-    width: 300px;
-    height: 200px;
-    padding: 10px;
-    max-width: 565px;
+  max-width: 90%;
+  height: 200px;
+  padding: 10px;
+}
 
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .contact-button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 180px;
-    height: 150px;
-    background: var(--gray);
-    border: 2px solid var(--gray);
-    outline: none;
-    cursor: pointer;
-    font-size: 1.1rem;
-    color: var(--light);
-    font-weight: 700;
-    transition: .5s;
-    border-radius: var(--radius);
-    margin: 0 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 150px;
+  background: var(--gray);
+  border: 2px solid var(--gray);
+  outline: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: var(--light);
+  font-weight: 700;
+  transition: 0.5s;
+  border-radius: var(--radius);
 }
 
-.contact-buttons button {
-    margin: 0 10px 0 10px;
-
+.contact-button:hover {
+  background: var(--primary);
+  border: 2px solid var(--primary);
+  color: var(--light);
 }
 
-.contact-buttons ion-icon{
-    width: 50px;
-    height: 50px;
-    padding: 10px;
+.iconsvg {
+  width: 50px;
+  margin: 10px;
 }
 
-.contact-buttons iconify-icon {
-    width: auto;
-    height: auto;
-    padding: 10px;
+.iconsvg.send {
+  width: 35px;
+  margin: 10px;
 }
-
-
-.contact-button:hover{
-    background: var(--primary);
-    border: 2px solid var(--primary);
-    color: var(--light);
-}
-
 
 /* ContactMe Responsivenes */
 
-
 @media (max-width: 1080px) {
+  /* ContactMe Section */
+  .contact-wrapper {
+    flex-direction: column;
+    width: auto;
+    gap: 0;
+  }
 
-    /* ContactMe Section */
-    .contact-wrapper {
-        flex-direction: column;
-        width: auto;
+  .contact-form {
+    border-radius: 0;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    border-bottom: none;
+  }
 
-    }
+  .contact-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0px;
+  }
 
+  .contact-link {
+    width: 100%;
+    position: relative;
+  }
 
-    .contact-form {
-        border-radius: 0;
-        border-top-left-radius:  var(--radius);
-        border-top-right-radius:  var(--radius); 
-        border-bottom: none;
+  .contact-button {
+    border-radius: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+  }
 
-    }
+  .contact-button.left {
+    border-bottom-left-radius: var(--radius);
+  }
 
+  .contact-button.right {
+    border-bottom-right-radius: var(--radius);
+  }
 
-    .contact-buttons {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: nowrap;
-    }
+  /* --- Inverted Border Radius --- */
 
-    .contact-link {
-        width: 100%;
-        position: relative;
-    }
+  .contact-button.left::after,
+  .contact-button.right::after {
+    --border-radius: 1rem;
 
+    content: "";
+    position: absolute;
+    background-color: var(--black);
+    width: var(--border-radius);
+    height: var(--border-radius);
+    border-radius: 100%;
+    transition: 0.5s;
+    pointer-events: none;
+  }
 
-    div.contact-button,
-    button.contact-button {
-        border-radius: 0;
-        margin: 0;
-        width: 100%;
-        height: 100%;
-    }
+  .contact-button.left::before,
+  .contact-button.right::before {
+    --border-radius: 1rem;
 
-    .contact-buttons a:nth-child(1) .left {
-        border-bottom-left-radius:  var(--radius);
-    }
-    
-    .contact-buttons a:nth-child(3) .right {
-        border-bottom-right-radius:  var(--radius);
-     } 
+    content: "";
+    position: absolute;
+    background-color: var(--gray);
+    width: var(--border-radius);
+    height: var(--border-radius);
+    transition: 0.5s;
+    pointer-events: none;
+  }
 
-    .contact-button ion-icon{
-        width: 45px;
-        height: 45px;
-        padding: 5px;
-    }
+  .contact-button.left::before {
+    top: -14px;
+    left: 0px;
+  }
 
+  .contact-button.left::after {
+    top: -16px;
+    left: 2px;
+    border-radius: 0 0 0 100vw;
+  }
 
+  .contact-button.right::before {
+    top: -14px;
+    right: 0px;
+  }
 
+  .contact-button.right::after {
+    top: -16px;
+    right: 2px;
+    border-radius: 0 0 100vw 0;
+  }
 
+  .contact-button.right:hover::before,
+  .contact-button.left:hover::before {
+    background-color: var(--primary);
+    transition: 0.5s;
+  }
 
-    /* --- Inverted Border Radius --- */
-
-    .contact-buttons .left::after,
-    .contact-buttons .right::after{
-        --border-radius: 1rem;
-
-        content: '';
-        position: absolute;
-        background-color: var(--black);
-        width: var(--border-radius);
-        height: var(--border-radius);
-        border-radius: 100%;
-        transition: .5s;
-        pointer-events:none;
-    }
-
-    .contact-buttons .left::before,
-    .contact-buttons .right::before{
-        --border-radius: 1rem;
-
-        content: '';
-        position: absolute;
-        background-color: var(--gray);
-        width: var(--border-radius);
-        height: var(--border-radius);
-        transition: .5s;
-        pointer-events:none;
-    }
-
-    .contact-buttons .left::before {
-        top: -14px;
-        left: 0px;
-    }
-
-    .contact-buttons .left::after{
-        top: -16px;
-        left: 2px;
-        border-radius: 0 0 0 100vw;
-    }
-
-
-    .contact-buttons .right::before {
-        top: -14px;
-        left: 86%;
-    }
-
-    .contact-buttons .right::after{
-        top: -16px;
-        left: 85%;
-        border-radius: 0 0 100vw 0;
-    }
-
-    .contact-buttons .right:hover::before,
-    .contact-buttons .left:hover::before{
-        background-color: var(--primary);
-        transition: .5s;
-        
-    }
+  .iconsvg,
+  .iconsvg.send {
+    width: 30px;
+    margin: 5px;
+  }
+  .iconsvg.send {
+    padding: 2px;
+  }
 }
 
 /* ---- Responsivenes ---- */
 
 @media (max-width: 880px) {
+  /* Timeline Responsivenes */
+  .timeline {
+    max-width: 360px;
+  }
 
+  .timeline::before {
+    left: 8px;
+  }
 
-    /* Timeline Responsivenes */
+  .timeline ul {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .timeline::before {
-        left: 8px;
+  .point.point-left,
+  .point.point-right {
+    display: flex;
 
-    }
+    left: 0;
+  }
 
-    .timeline ul {
-        display: flex;
-        flex-direction: column;
-    }
+  .timeline ul li {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
 
- 
-    .point.point-left,
-    .point.point-right {
-        display: flex;
+  .timeline ul li .content {
+    width: 95%;
+    padding: 0 27px 0 11px;
+  }
 
-        left: 0;
-    }
+  /* MyTackStack Responsivenes*/
 
-    .timeline ul li {
-        display: flex;
-        flex-direction: row-reverse; 
-        justify-content: flex-end;
-    }
+  #techstack {
+    min-height: 1050px;
+  }
 
-    .timeline ul li .content {
-        width: 95%;
-        padding: 0 27px 0 11px;
+  .tab-wrapper {
+    grid-template-columns: 180px 180px;
+  }
 
-    }
+  /*  MyProjects Slider  */
+  #projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .container {
+    flex-direction: column;
+    width: 90vw;
+    height: 40vh;
+  }
 
-      /* MyTackStack Responsivenes*/
+  /* Main and Header */
 
-    #techstack {
-        min-height: 1050px;
-    }
+  main {
+    width: 90vw;
+  }
 
-    .tab-wrapper {
-        grid-template-columns:  180px 180px;
-    }
+  .nav {
+    flex-direction: column;
+    gap: 2rem;
+  }
 
+  .navlist {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
 
+  .hamMenu {
+    display: flex;
 
+    z-index: 2;
+  }
 
- /*  MyProjects Slider  */
-    #projects{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .container {
-        flex-direction: column;
-        width: 90vw;
-        height: 40vh;
-    }
+  .nav {
+    position: absolute;
+    top: -100vh;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
 
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    color: var(--light);
 
+    transition: all 0.15s ease-in-out;
+  }
 
-    /* Main and Header */
+  .header {
+    padding: 20px;
+  }
 
-    main {
-        width: 90vw;
-    }
+  header.active {
+    backdrop-filter: none; /* this is necessary for the overlay menu to work */
+  }
 
-    .nav {
-        flex-direction: column;
-        gap: 2rem;
-    }
+  .nav.active {
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background: transparent;
+    color: var(--light);
+    backdrop-filter: blur(20px) grayscale(40%);
+    box-shadow: var(--shadow);
+    z-index: 1;
+  }
 
-    .navlist {
-        display: flex;
-        flex-direction: column;
-        gap: .6rem;
-    }
-
-    .hamMenu {
-        display: flex;
-
-        z-index: 2;
-    }
-
-    .nav {
-        position: absolute;
-        top: -100vh;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100vh;
-
-        align-items: center;
-        text-align: center;
-        background-color: transparent;
-        color: var(--light);
-
-        transition: all 0.15s ease-in-out;
-    }
-
-    .header {
-        padding: 20px;
-
-    }
-
-    header.active {
-        backdrop-filter:none; /* this is necessary for the overlay menu to work */
-        
-    }   
-
-    .nav.active {
-        top: 0;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        height: 100vh;
-        background: transparent;
-        color: var(--light);
-        backdrop-filter: blur(20px) grayscale(40%);
-        box-shadow: var(--shadow);
-        z-index: 1;
-    }
-
-    .nav.active a{
-        display: flex;
-        align-items: flex-start;
-        margin: 30px; 
-        
-    }
-
-
+  .nav.active a {
+    display: flex;
+    align-items: flex-start;
+    margin: 30px;
+  }
 }
 
-
-
 @media (max-width: 410px) {
-   
-    /* --- AboutMe --- */
+  /* --- AboutMe --- */
 
- 
-     /* ---- Timeline ----- */
- 
-     .timeline {
-        width: 100%; 
-     }
- 
- 
-     /* --- MyTackStack --- */
- 
-     #techstack {
-         min-height: 1050px;
-     }
- 
-     .tab-wrapper {
-         grid-template-columns:  140px 140px;
-     }
- 
-     .tabs {
-         grid-template-rows: 110px; 
- 
-     }
- 
- }
+  /* ---- Timeline ----- */
+
+  .timeline {
+    width: 100%;
+  }
+
+  /* --- MyTackStack --- */
+
+  #techstack {
+    min-height: 1050px;
+  }
+
+  .tab-wrapper {
+    grid-template-columns: 140px 140px;
+  }
+
+  .tabs {
+    grid-template-rows: 110px;
+  }
+
+  /* ContactMe Section */
+
+  .contact-wrapper {
+    width: 100%;
+  }
+  .contact-form {
+    width: 90%;
+  }
+}
