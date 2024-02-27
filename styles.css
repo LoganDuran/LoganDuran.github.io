@@ -298,6 +298,11 @@ footer .logo-bottom span {
   width: 100%;
 }
 
+.iconsvg.small {
+  width: 20px;
+  margin: 0px;
+}
+
 /* --- Specific Button Radius --- */
 
 .iconlink .left {
@@ -503,6 +508,7 @@ footer .logo-bottom span {
   max-width: 660px;
   width: 660px;
   height: 340px;
+  gap: 1rem;
 }
 
 .panel {
@@ -516,7 +522,6 @@ footer .logo-bottom span {
   border-radius: var(--radius);
   color: var(--light);
   flex: 0.5;
-  margin: 0 10px 0 10px;
   cursor: pointer;
   position: relative;
   transition: all 0.7s ease-in;
@@ -823,7 +828,7 @@ div.contact-form form h2 {
   /* Main and Header */
 
   main {
-    margin: 30px;
+    margin: 10px;
   }
 
   .nav {
@@ -916,6 +921,6 @@ div.contact-form form h2 {
     width: 100%;
   }
   .contact-form {
-    width: 90%;
+    width: 100%;
   }
 }
