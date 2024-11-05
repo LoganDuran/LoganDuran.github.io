@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<link rel="preload" href="Mona-Sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -32,44 +33,76 @@
       <div class="wrapper">
           <div class="content-padding">
             <h1>AboutMe</h1>
-            <img class="avatar" src="img/avatar.jpg" alt="">
-            <p>Hi, I'm Luka, a web developer from Belgrade, Serbia. </p>
-            <p>I love creating awesome websites that stand out. Let's make your online presence shine!</p>
+            <img class="avatar" src="assets/img/avatar.jpg" alt="">
+            <p>Hi guys I'm Luka welcome to my portfolio site.</p>
+            <!-- <p>I really like making stuff!</p> -->
          </div>
       </div>
       <div class="icontray">
-        <a class="iconlink left" href="https://www.linkedin.com/in/lukadjuricic"><div class="divbutton left"> <img class="iconsvg small" src="img/icons/linkedin.svg" alt="Linkedin Icon"> Linkedin</div></a>
-        <a class="iconlink" href="https://github.com/LoganDuran"><div class="divbutton"> <img class="iconsvg small" src="img/icons/github.svg" alt="Github Icon"> Github</div></a>
-        <a class="iconlink right" href="mailto: luka94djuricic@gmai.com"><div class="divbutton right"> <img class="iconsvg small" src="img/icons/mail.svg" alt="Mail Icon"> Mail</div></a> 
+        <a class="iconlink left" href="https://www.linkedin.com/in/lukadjuricic"><div class="divbutton left"> <img class="iconsvg small" src="assets/icons/linkedin.svg" alt="Linkedin Icon"> Linkedin</div></a>
+        <a class="iconlink" href="https://github.com/LoganDuran"><div class="divbutton"> <img class="iconsvg small" src="assets/icons/github.svg" alt="Github Icon"> Github</div></a>
+        <a class="iconlink right" href="mailto: luka94djuricic@gmai.com"><div class="divbutton right"> <img class="iconsvg small" src="assets/icons/mail.svg" alt="Mail Icon"> Mail</div></a> 
      </div>
      </section>
 
+       <!-- TimeLine -->
+    <!-- <h2 class="chapter">MyTimeline</h2> -->
 
+    <div class="textbubble preamble">
+      <h3>Pre 2022 </h3>
+      <p>I've always had a passion for making and modifying things. Back in the MySpace era, I fully customized my profile by modding the CSS—even though I didn’t know what CSS was back then! I also modded video games from as early as I can remember.</p>
+                    
+      <p>As a kid, I converted my old fixed-gear bicycle to an 18-speed. At 14, I swapped a more powerful engine into my car, and it worked great. I even converted an electric guitar to a piezo-acoustic so I could use nylon strings on it.</p>
 
-  <!-- TimeLine -->
+      <p>Before I began working in tech, I thought I would become a CNC programmer. I started attending an apprenticeship, where I learned the basics of G-code and manufactured my very first pieces.</p>
+      
+    </div>    
+
   <div class="timeline">
-    <!-- <h2 class="chapter">Timeline</h2> -->
-
       <ul>
         <li>
-          <div class="content">
-            <h3>2022</h3>
-            <p>Learned the basics of HTML, CSS and JavaScript for a personal website project. Also learned about the web in general, hosting, servers, accessibility best practices etc.</p>
-          </div>
-          <div class="point point-right"></div>
+          <div class="point point-centar "></div>
         </li>
         <li>
           <div class="content">
-            <h3>2023</h3>
-            <p>Began freelancing with WordPress, started making a full stack CRUD project utilizing PHP and MySQL. Continued improving my Frontend skills, in particular my CSS. Delved into the world of SEO </p>
+            <div class="textbubble">
+            <h3>2022</h3>
+            <p>Began working in ExamRoom.Ai as an Onboarding agent was surrounded by a lot of talented developers who got me interested in web development. </p>
+              
+              <p>
+              I immediately began learning about how the web works client, server, hosting, database, etc started my first personal projects with HTML, CSS, JavaScript 
+              
+            </p>
+          </div>
           </div>
           <div class="point point-left"></div>
         </li>
         <li>
           <div class="content">
+            <div class="textbubble">
+            <h3>2023</h3>
+            <p>Began freelancing with WordPress, started making a full stack CRUD project utilizing PHP and MySQL. Continued improving my Frontend skills, in particular my CSS. Delved into the world of SEO
+            </p>
+          </div>
+          </div>
+          <div class="point point-right"></div>
+        </li>
+        <li>
+          <div class="content">
+            <div class="textbubble">
             <h3>2024</h3>
+            <p>Began freelancing with WordPress, started making a full stack CRUD project utilizing PHP and MySQL. Continued improving my Frontend skills, in particular my CSS. Delved into the world of SEO </p>
+          </div>
+          </div>
+          <div class="point point-left"></div>
+        </li>
+        <li>
+          <div class="content">
+            <div class="textbubble">
+            <h3>2025</h3>
             <p>Started utilizing React for WordPress custom block project.</p>
           </div>
+        </div>
           <div class="point point-right"></div>
         </li>
       </ul>
@@ -103,19 +136,30 @@
       <h2 class="chapter">MyProjects</h2>
 
         <div class="container">
-            <div class="panel active" style="background-image: url(img/PHPprojectCRUD.jpg);">
+            <div class="panel active" style="background-image: url(assets/img/PHPprojectCRUD.jpg);">
                 <h3>PHPprojectCRUD</h3>
                 <!-- <p>ClickMe</p> -->
             </div>
-            <div class="panel" style="background-image: url(img/expandingPhotosJS.jpg);">
+            <div class="panel" style="background-image: url(assets/img/expandingPhotosJS.jpg);">
                 <h3>expandingPhotosJS</h3>
                 <!-- <p>ClickMe</p> -->
             </div>
-            <div class="panel" style="background-image: url(img/StopwatchJS.jpg);">
+            <div class="panel" style="background-image: url(assets/img/StopwatchJS.jpg);">
                 <h3>StopwatchJS</h3>
                 <!-- <p>ClickMe</p> -->
             </div>
           </div>
+
+          <div class="textbubble">
+            <h3>Pre 2022 </h3>
+            <p>I always had a passion for making and modifying stuff. Back in the MySpace era, I fully customized my profile by modding the CSS (even though I didn't know what CSS was back then) <br>
+            
+            <p> I also modded video games, at 14 years old I swapped engines from one car to another.</p>
+      
+            <p>
+            before starting work in my first tech company I thought my future was going to be a CNC programmer apprenticeship I started  learning g code and manufactured my very first pieces .</p>
+            
+          </div>    
     </section>
     
     <section id="contact">
@@ -132,9 +176,9 @@
           </div>
 
             <div class="contact-buttons">
-              <a class="contact-link" href="https://www.linkedin.com/in/lukadjuricic"><div class="contact-button left"> <img class="iconsvg" src="img/icons/linkedin.svg" alt="Linkedin Icon"> Linkedin</div></a>
-              <a class="contact-link" href="https://github.com/LoganDuran"><div class="contact-button"><img class="iconsvg" src="img/icons/github.svg" alt="Github Icon"> Github</div></a>
-              <a class="contact-link">  <button class="contact-button right" type="submit"><img class="iconsvg send" src="img/icons/send.svg" alt="Send Icon"> Send</button> </a>
+              <a class="contact-link" href="https://www.linkedin.com/in/lukadjuricic"><div class="contact-button left"> <img class="iconsvg" src="assets/icons/linkedin.svg" alt="Linkedin Icon"> Linkedin</div></a>
+              <a class="contact-link" href="https://github.com/LoganDuran"><div class="contact-button"><img class="iconsvg" src="assets/icons/github.svg" alt="Github Icon"> Github</div></a>
+              <a class="contact-link">  <button class="contact-button right" type="submit"><img class="iconsvg send" src="assets/icons/send.svg" alt="Send Icon"> Send</button> </a>
             </div>
         </form> 
       </div>

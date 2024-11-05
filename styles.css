@@ -389,11 +389,33 @@ footer p {
   transition: 0.5s;
 }
 
+/* --- Universal Text Bubble --- */
+.textbubble {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 660px;
+  height: auto;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid var(--gray);
+  border-radius: var(--radius);
+}
+
+.textbubble h3 {
+  text-align: center;
+  /* padding: 0 0 10px 0; */
+}
+
 /* ---- Timeline ----- */
+
+.preamble {
+  margin: 60px 20px 20px 20px;
+}
 
 .timeline {
   position: relative;
-  margin: 55px auto;
+  margin: 0 auto 55px;
   max-width: 660px;
 }
 .timeline ul li {
@@ -409,9 +431,13 @@ footer p {
   background-color: var(--black);
   border-radius: 100%;
   z-index: 2;
-  border: 3px var(--gray) solid;
+  border: 2px var(--gray) solid;
   position: relative;
 }
+.point.point-centar {
+  left: 48.7%;
+}
+
 .point.point-right {
   right: 9px;
 }
@@ -425,22 +451,10 @@ footer p {
   padding: 0 20px;
 }
 
-.timeline ul li .content h3 {
-  padding-top: 12px;
-  background-color: var(--gray);
-  margin-bottom: 0;
-  text-align: center;
-  border-top-left-radius: var(--radius);
-  border-top-right-radius: var(--radius);
+.timeline ul li .content .textbubble {
+  margin: 0;
 }
 
-.timeline ul li .content p {
-  padding: 8px 20px 15px 20px;
-  background-color: var(--gray);
-  margin-top: 0;
-  border-bottom-left-radius: var(--radius);
-  border-bottom-right-radius: var(--radius);
-}
 .timeline ul li:nth-child(even) {
   flex-direction: row-reverse;
 }
@@ -449,7 +463,7 @@ footer p {
   content: "";
   position: absolute;
   height: 100%;
-  width: 3px;
+  width: 2px;
   left: 50%;
   background-color: var(--gray);
 }
@@ -468,8 +482,6 @@ footer p {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100vh;
-  min-height: 670px;
   border-top: 2px solid;
   border-color: var(--gray);
 }
@@ -494,15 +506,6 @@ footer p {
   background: var(--primary);
   color: var(--light);
   transition: 0.4s;
-}
-
-.textbubble {
-  max-width: 660px;
-  height: auto;
-  padding: 20px;
-  margin: 20px;
-  border: 2px solid var(--gray);
-  border-radius: var(--radius);
 }
 
 /* --- MyProjects --- */
@@ -803,7 +806,8 @@ div.contact-form form h2 {
   }
 
   .point.point-left,
-  .point.point-right {
+  .point.point-right,
+  .point.point-centar {
     display: flex;
 
     left: 0;
