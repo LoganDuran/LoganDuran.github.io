@@ -254,10 +254,13 @@ footer p {
 
 .content-padding {
   display: flex;
-  padding: 20px 25px 15px 25px;
+  padding: 20px 25px 10px 25px;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+}
+.content-padding p {
+  margin-bottom: 5px;
 }
 
 .avatar {
