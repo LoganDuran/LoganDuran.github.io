@@ -10,7 +10,7 @@
   --p-size: 1.1rem;
 
   --blur: blur(20px);
-  --shadow: 0 0 30px var(--gray);
+  --shadow: 0 0 30px black;
 
   --radius: 1rem;
 }
@@ -247,7 +247,7 @@ footer .logo-bottom span {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  box-shadow: 0 0 30px var(--gray);
+  box-shadow: 0 0 20px black;
 }
 
 /* --- Buttons --- */
