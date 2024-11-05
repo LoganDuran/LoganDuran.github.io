@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Righteous&display=swap");
 
+@font-face {
+  font-family: "Mona Sans";
+  src: url("assets/fonts/Mona-Sans.woff2") format("woff2 supports variations"),
+    url("assets/fonts/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 600;
+  font-stretch: 125%;
+}
+
 :root {
   --primary: rgb(151, 136, 166);
   --black: #0d1117;
@@ -13,6 +21,10 @@
   --shadow: 0 0 30px black;
 
   --radius: 1rem;
+}
+
+.add-shadow {
+  box-shadow: var(--shadow);
 }
 
 html {
@@ -59,6 +71,7 @@ h2 {
 
 p {
   font-size: 0.9rem;
+  font-family: "Mona Sans", "Comfortaa";
 }
 
 /* --- Header Section --- */
@@ -207,6 +220,11 @@ footer .logo-bottom {
 footer .logo-bottom span {
   color: var(--primary);
   font-family: Righteous;
+}
+footer p {
+  font-size: 0.9rem;
+  font-family: "Comfortaa";
+  font-weight: 700;
 }
 
 /* --- intro and AboutMe --- */
