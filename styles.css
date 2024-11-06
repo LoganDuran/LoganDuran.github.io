@@ -44,7 +44,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--black);
+  background: url(assets/img/crtiica-1000.png);
+  background-size: 20px;
+  background-repeat: repeat;
   color: var(--light);
 }
 
@@ -54,6 +56,9 @@ main {
   justify-content: center;
   align-items: center;
   padding-top: 120px;
+  padding: 120px 50px 0px 50px;
+  background-color: var(--black);
+  box-shadow: var(--shadow);
 }
 
 a {
@@ -203,6 +208,7 @@ nav {
 footer {
   border-top: 2px solid var(--gray);
   box-shadow: var(--shadow);
+  background: var(--black);
   font-weight: bold;
   text-align: center;
   width: 100%;
@@ -697,6 +703,10 @@ div.contact-form form h2 {
 /* ContactMe Responsivenes */
 
 @media (max-width: 1080px) {
+  main {
+    padding: 120px 0px 0px 0px;
+  }
+
   /* ContactMe Section */
   .contact-wrapper {
     flex-direction: column;
