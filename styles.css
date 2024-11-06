@@ -700,11 +700,11 @@ div.contact-form form h2 {
   margin: 10px;
 }
 
-/* ContactMe Responsivenes */
+/* ---- Responsivenes ---- */
 
 @media (max-width: 1080px) {
   main {
-    padding: 120px 0px 0px 0px;
+    padding: 120px 15px 0px 15px;
   }
 
   /* ContactMe Section */
@@ -877,10 +877,6 @@ div.contact-form form h2 {
   }
 
   /* Main and Header */
-
-  main {
-    margin: 10px;
-  }
 
   .nav {
     flex-direction: column;
