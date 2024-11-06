@@ -1,217 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LoganDuran</title>
-    <link rel="icon" type="image/x-icon" href="/img/avatar.favicon1.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-<link rel="preload" href="Mona-Sans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
+    <link rel="icon" type="image/x-icon" href="/img/avatar.favicon1.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/Mona-Sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header class="header">
-      <a href="https://loganduran.github.io/" class="logo">Logan<span>Duran</span></a>
-           <nav class="nav">
-            <ul class="navlist">
-              <li><a class="navlinks" href="#aboutme">AboutMe</a></li>
-              <li><a class="navlinks" href="#techstack">MyTechStack</a></li>
-              <li><a class="navlinks" href="#projects">MyProjects</a></li>
-              <li><a class="navlinks" href="#contact">ContactMe</a></li>
-            </ul>
-        </nav>    
-        <div class = "hamMenu"><div class = "hamButton"></div></div>
+      <a href="https://loganduran.github.io/" class="logo"
+        >Logan<span>Duran</span></a
+      >
+      <nav class="nav">
+        <ul class="navlist">
+          <li><a class="navlinks" href="#aboutme">AboutMe</a></li>
+          <li><a class="navlinks" href="#techstack">MyTechStack</a></li>
+          <li><a class="navlinks" href="#projects">MyProjects</a></li>
+          <li><a class="navlinks" href="#contact">ContactMe</a></li>
+        </ul>
+      </nav>
+      <div class="hamMenu"><div class="hamButton"></div></div>
     </header>
-   <main>
-
-
-    <section id="aboutme">
-      <div class="wrapper">
+    <main>
+      <section id="aboutme">
+        <div class="wrapper">
           <div class="content-padding">
             <h1>AboutMe</h1>
-            <img class="avatar" src="assets/img/avatar.jpg" alt="">
+            <img class="avatar" src="assets/img/avatar.jpg" alt="" />
             <p>Hi guys, I’m Luka.</p>
             <p>Welcome to my portfolio site!</p>
             <p>As you can probably tell, it was heavily inspired by GitHub.</p>
-         </div>
+          </div>
+        </div>
+        <div class="icontray">
+          <a
+            class="iconlink left"
+            href="https://www.linkedin.com/in/lukadjuricic"
+            ><div class="divbutton left">
+              <img
+                class="iconsvg small"
+                src="assets/icons/linkedin.svg"
+                alt="Linkedin Icon"
+              />
+              Linkedin
+            </div></a
+          >
+          <a class="iconlink" href="https://github.com/LoganDuran"
+            ><div class="divbutton">
+              <img
+                class="iconsvg small"
+                src="assets/icons/github.svg"
+                alt="Github Icon"
+              />
+              Github
+            </div></a
+          >
+          <a class="iconlink right" href="mailto: luka94djuricic@gmai.com"
+            ><div class="divbutton right">
+              <img
+                class="iconsvg small"
+                src="assets/icons/mail.svg"
+                alt="Mail Icon"
+              />
+              Mail
+            </div></a
+          >
+        </div>
+      </section>
+
+      <!-- TimeLine -->
+      <!-- <h2 class="chapter">MyTimeline</h2> -->
+
+      <div class="textbubble preamble">
+        <h3>Preamble</h3>
+        <p>
+          I've always had a passion for making and modifying things. Back in the
+          MySpace era, I fully customized my profile by modding the CSS—even
+          though I didn’t know what CSS was back then! I also modded video games
+          from as early as I can remember.
+        </p>
+
+        <p>
+          As a kid, I converted my old fixed-gear bicycle to an 18-speed. At 14,
+          I swapped a more powerful engine into my car, and it worked great. I
+          even converted an electric guitar to a piezo-acoustic so I could use
+          nylon strings on it.
+        </p>
+
+        <p>
+          Before I began working in tech, I thought I would become a CNC
+          Programmer. I started attending an apprenticeship, where I learned the
+          basics of G-code and manufactured my very first pieces.
+        </p>
       </div>
-      <div class="icontray">
-        <a class="iconlink left" href="https://www.linkedin.com/in/lukadjuricic"><div class="divbutton left"> <img class="iconsvg small" src="assets/icons/linkedin.svg" alt="Linkedin Icon"> Linkedin</div></a>
-        <a class="iconlink" href="https://github.com/LoganDuran"><div class="divbutton"> <img class="iconsvg small" src="assets/icons/github.svg" alt="Github Icon"> Github</div></a>
-        <a class="iconlink right" href="mailto: luka94djuricic@gmai.com"><div class="divbutton right"> <img class="iconsvg small" src="assets/icons/mail.svg" alt="Mail Icon"> Mail</div></a> 
-     </div>
-     </section>
 
-       <!-- TimeLine -->
-    <!-- <h2 class="chapter">MyTimeline</h2> -->
+      <div class="timeline">
+        <ul>
+          <li>
+            <div class="point point-centar"></div>
+          </li>
+          <li>
+            <div class="content">
+              <div class="textbubble">
+                <h3>2022</h3>
+                <p>
+                  I began working at ExamRoom.AI as an Onboarding Agent, where I
+                  was surrounded by a lot of talented developers. Talking with
+                  them sparked my interest in web development.
+                </p>
 
-    <div class="textbubble preamble">
-      <h3>Preamble</h3>
-      <p>I've always had a passion for making and modifying things. Back in the MySpace era, I fully customized my profile by modding the CSS—even though I didn’t know what CSS was back then! I also modded video games from as early as I can remember.</p>
-                    
-      <p>As a kid, I converted my old fixed-gear bicycle to an 18-speed. At 14, I swapped a more powerful engine into my car, and it worked great. I even converted an electric guitar to a piezo-acoustic so I could use nylon strings on it.</p>
+                <p>
+                  I quickly started learning how the web works—clients, servers,
+                  HTTP, databases, hosting, and more—and began creating my first
+                  personal projects using HTML, CSS, and JavaScript.
+                </p>
+              </div>
+            </div>
+            <div class="point point-right"></div>
+          </li>
+          <li>
+            <div class="content">
+              <div class="textbubble">
+                <h3>2023</h3>
+                <p>
+                  I decided to go all in and learn Web Development full-time.
+                  Started by learning PHP and SQL as I decided to focus on the
+                  WordPress Stack.
+                </p>
+                <p>
+                  Worked on filling the knowledge gaps by starting ever more
+                  ambitious projects.
+                </p>
+                <p>
+                  got practical hands-on experience with hosting, Cpanel, SEO,
+                  Google Search Console, etc
+                </p>
 
-      <p>Before I began working in tech, I thought I would become a CNC Programmer. I started attending an apprenticeship, where I learned the basics of G-code and manufactured my very first pieces.</p>
-      
-    </div>    
+                <p>
+                  the major milestone of this year were the first projects I did
+                  for actual clients
+                </p>
+              </div>
+            </div>
+            <div class="point point-left"></div>
+          </li>
+          <li>
+            <div class="content">
+              <div class="textbubble">
+                <h3>2024</h3>
+                <p>
+                  Began freelancing with WordPress, started making a full stack
+                  CRUD project utilizing PHP and MySQL. Continued improving my
+                  Frontend skills, in particular my CSS. Delved into the world
+                  of SEO
+                </p>
+              </div>
+            </div>
+            <div class="point point-right"></div>
+          </li>
+          <li>
+            <div class="content">
+              <div class="textbubble">
+                <h3>2025</h3>
+                <p>
+                  Started utilizing React for WordPress custom block project.
+                </p>
+              </div>
+            </div>
+            <div class="point point-left"></div>
+          </li>
+        </ul>
+      </div>
 
-  <div class="timeline">
-      <ul>
-        <li>
-          <div class="point point-centar "></div>
-        </li>
-        <li>
-          <div class="content">
-            <div class="textbubble">
-            <h3>2022</h3>
-            <p>I began working at ExamRoom.AI as an Onboarding Agent, where I was surrounded by a lot of talented developers. Talking with them sparked my interest in web development.</p>
-              
-            <p>I quickly started learning how the web works—clients, servers, HTTP, databases, hosting, and more—and began creating my first personal projects using HTML, CSS, and JavaScript.</p>
-          </div>
-          </div>
-          <div class="point point-left"></div>
-        </li>
-        <li>
-          <div class="content">
-            <div class="textbubble">
-            <h3>2023</h3>
-             <p> 
-              I decided to go all in and learn Web Development full-time. Started by learning PHP and SQL as I decided to focus on the WordPress Stack.
-            </p>
-            <p> 
-              Worked on filling the knowledge gaps by starting ever more ambitious projects. 
-            </p>
-             <p>
-              got practical hands-on experience with hosting, Cpanel, SEO, Google Search Console, etc
-            </p>
-
-            <p> the major milestone of this year were the first projects I did for actual clients 
-            </p>
-          </div>
-          </div>
-          <div class="point point-right"></div>
-        </li>
-        <li>
-          <div class="content">
-            <div class="textbubble">
-            <h3>2024</h3>
-            <p>Began freelancing with WordPress, started making a full stack CRUD project utilizing PHP and MySQL. Continued improving my Frontend skills, in particular my CSS. Delved into the world of SEO </p>
-          </div>
-          </div>
-          <div class="point point-left"></div>
-        </li>
-        <li>
-          <div class="content">
-            <div class="textbubble">
-            <h3>2025</h3>
-            <p>Started utilizing React for WordPress custom block project.</p>
-          </div>
-        </div>
-          <div class="point point-right"></div>
-        </li>
-      </ul>
-    </div>
- 
-
-    
-    <section id="techstack">
-      <h2 class="chapter">MyTechStack</h2>
+      <section id="techstack">
+        <h2 class="chapter">MyTechStack</h2>
         <div class="tab-wrapper">
-          <div class="tabs"><iconify-icon icon="akar-icons:html-fill"width="75"></iconify-icon></div>
-          <div class="tabs"><iconify-icon icon="akar-icons:css-fill"width="75"></iconify-icon></div>
-          <div class="tabs"><iconify-icon icon="fa6-brands:sass" width="70"></iconify-icon></div> 
-          <div class="tabs"><iconify-icon icon="bxl:php"width="75"></iconify-icon></div>
-          <div class="tabs"><iconify-icon icon="ic:outline-wordpress"width="75"></iconify-icon></div>
-          <div class="tabs"><iconify-icon icon="simple-icons:mysql"width="75"></iconify-icon></div>
-          <div class="tabs"><iconify-icon icon="fa6-brands:square-js"width="65"></iconify-icon></div>
-          <div class="tabs"><iconify-icon icon="akar-icons:react-fill" width="65"></iconify-icon></div> 
+          <div class="tabs">
+            <iconify-icon icon="akar-icons:html-fill" width="75"></iconify-icon>
+          </div>
+          <div class="tabs">
+            <iconify-icon icon="akar-icons:css-fill" width="75"></iconify-icon>
+          </div>
+          <div class="tabs">
+            <iconify-icon icon="fa6-brands:sass" width="70"></iconify-icon>
+          </div>
+          <div class="tabs">
+            <iconify-icon icon="bxl:php" width="75"></iconify-icon>
+          </div>
+          <div class="tabs">
+            <iconify-icon icon="ic:outline-wordpress" width="75"></iconify-icon>
+          </div>
+          <div class="tabs">
+            <iconify-icon icon="simple-icons:mysql" width="75"></iconify-icon>
+          </div>
+          <div class="tabs">
+            <iconify-icon icon="fa6-brands:square-js" width="65"></iconify-icon>
+          </div>
+          <div class="tabs">
+            <iconify-icon
+              icon="akar-icons:react-fill"
+              width="65"
+            ></iconify-icon>
+          </div>
         </div>
-        <div class="textbubble"><p>Here is a more detailed breakdown of technologies I feel comfortable working with.</p>
+        <div class="textbubble">
+          <p>
+            Here is a more detailed breakdown of technologies I feel comfortable
+            working with.
+          </p>
           <ul>
             <li>- CSS pre-processors: Sass or SCSS;</li>
 
             <li>- SQL DATABASES MySQL, MariaDB;</li>
           </ul>
-        </div>    
+        </div>
       </section>
-    
 
-    <section id="projects">
-      <h2 class="chapter">MyProjects</h2>
+      <section id="projects">
+        <h2 class="chapter">MyProjects</h2>
 
-      <div class="textbubble">
-        <h3>Allow me to present a few of my projects:</h3>
+        <div class="textbubble">
+          <h3>Allow me to present a few of my projects:</h3>
 
-        <div class="container">
-            <div class="panel active" style="background-image: url(assets/img/PHPprojectCRUD.jpg);">
-                <h3>PHPprojectCRUD</h3>
-                <!-- <p>ClickMe</p> -->
+          <div class="container">
+            <div
+              class="panel active"
+              style="background-image: url(assets/img/PHPprojectCRUD.jpg)"
+            >
+              <h3>PHPprojectCRUD</h3>
+              <!-- <p>ClickMe</p> -->
             </div>
-            <div class="panel" style="background-image: url(assets/img/expandingPhotosJS.jpg);">
-                <h3>expandingPhotosJS</h3>
-                <!-- <p>ClickMe</p> -->
+            <div
+              class="panel"
+              style="background-image: url(assets/img/expandingPhotosJS.jpg)"
+            >
+              <h3>expandingPhotosJS</h3>
+              <!-- <p>ClickMe</p> -->
             </div>
-            <div class="panel" style="background-image: url(assets/img/StopwatchJS.jpg);">
-                <h3>StopwatchJS</h3>
-                <!-- <p>ClickMe</p> -->
+            <div
+              class="panel"
+              style="background-image: url(assets/img/StopwatchJS.jpg)"
+            >
+              <h3>StopwatchJS</h3>
+              <!-- <p>ClickMe</p> -->
             </div>
           </div>
         </div>
 
-          <div class="textbubble">
-            <h4>WebGrid.Dev Projects Gallery Slider</h4>
-            <img src="assets/img/WebGridCustomBlock.jpg" alt="Img of WebGrid.Dev Projects Gallery Slider" style="max-width: 100%;" width="100%"">
-          
-              <p>
-              Custom Image Gallery Block with Sliding Zoom-In Effect </p>
-              <p>
-               This block is perfect for showcasing image collections such as photography portfolios, product images, travel photos, or any visual content that benefits from added depth and movement.</p>
-            
-              <p>You can view the repo <a href='https://github.com/LoganDuran/wgd-projects-gallery-block'>here</a>.</p>
-            </p>
-          </div>    
+        <div class="textbubble">
+          <h4>WebGrid.Dev Projects Gallery Slider</h4>
+          <img src="assets/img/WebGridCustomBlock.jpg" alt="Img of WebGrid.Dev
+          Projects Gallery Slider" style="max-width: 100%;" width="100%"">
 
-          
-          <div class="textbubble">
-            <h4>PHPprojectCrud - a CRUD app using PHP</h4>
-           <img src="assets/img/PHPprojectCRUD2.png" alt="Img of PHPprojectCrud" style="max-width: 100%;" width="100%"">
-            
-            <p>
-              
-              PHPprojectCrud - everything was coded from scratch manually, although I did have to reference quite a lot of online resources
-              <br>
-              <p>You can view the repo <a href='https://github.com/LoganDuran/PHPprojectCrud'>here</a>.</p>
-            </p>
-          </div>    
-          <div class="textbubble">
-            <h4>Istorija Za Decu - History for children ages 10 to 14 years old.</h4>
-           <img src="assets/img/istorijazadecu2.jpg" alt="img - History for children ages 10 to 14 years old." style="max-width: 100%;" width="100%"">
-            
-            <p>
-              
-              istorijazadecu.rs - everything was coded from scratch manually, although I did have to reference quite a lot of online resources
-              <br>
-              <p>You can view the website <a href='https://istorijazadecu.rs/'>here</a>.</p>
-            </p>
-          </div> 
-          <div class="textbubble">
-            <h4>BeLikeNow - Piercing & Tattoo Studio.</h4>
-           <img src="assets/img/belikenow.jpg" alt="img - History for children ages 10 to 14 years old." style="max-width: 100%;" width="100%"">
-            
-            <p>
-              
-              istorijazadecu.rs - everything was coded from scratch manually, although I did have to reference quite a lot of online resources
-              <br>
-              <p>You can view the website <a href='https://belikenow.rs/'>here</a>.</p>
-            </p>
-          </div> 
-    </section>
-    
-    <section id="contact">
+          <p>Custom Image Gallery Block with Sliding Zoom-In Effect</p>
+          <p>
+            This block is perfect for showcasing image collections such as
+            photography portfolios, product images, travel photos, or any visual
+            content that benefits from added depth and movement.
+          </p>
+
+          <p>
+            You can view the repo
+            <a href="https://github.com/LoganDuran/wgd-projects-gallery-block"
+              >here</a
+            >.
+          </p>
+        </div>
+
+        <div class="textbubble">
+          <h4>PHPprojectCrud - a CRUD app using PHP</h4>
+          <img src="assets/img/PHPprojectCRUD2.png" alt="Img of PHPprojectCrud"
+          style="max-width: 100%;" width="100%"">
+
+          <p>
+            PHPprojectCrud - everything was coded from scratch manually,
+            although I did have to reference quite a lot of online resources
+            <br />
+          </p>
+
+          <p>
+            You can view the repo
+            <a href="https://github.com/LoganDuran/PHPprojectCrud">here</a>.
+          </p>
+        </div>
+        <div class="textbubble">
+          <h4>
+            Istorija Za Decu - History for children ages 10 to 14 years old.
+          </h4>
+          <img src="assets/img/istorijazadecu2.jpg" alt="img - History for
+          children ages 10 to 14 years old." style="max-width: 100%;"
+          width="100%"">
+
+          <p>
+            istorijazadecu.rs - History for children ages 10 to 14 years old.
+          </p>
+
+          <p>
+            You can view the website
+            <a href="https://istorijazadecu.rs/">here</a>.
+          </p>
+        </div>
+        <div class="textbubble">
+          <h4>BeLikeNow - Piercing & Tattoo Studio.</h4>
+          <img src="assets/img/belikenow.jpg" alt="img - History for children
+          ages 10 to 14 years old." style="max-width: 100%;" width="100%"">
+
+          <p>
+            istorijazadecu.rs - everything was coded from scratch manually,
+            although I did have to reference quite a lot of online resources
+            <br />
+          </p>
+
+          <p>
+            You can view the website <a href="https://belikenow.rs/">here</a>.
+          </p>
+        </div>
+      </section>
+      <section id="contact">
       <div class="contact-wrapper">
         <div class="contact-form">
       <form class="contact-inputs" action="https://formcarry.com/s/QAOEHzLKJMg" method="POST" enctype="multipart/form-data">
@@ -232,19 +352,29 @@
         </form> 
       </div>
     </section>
-
-
-
-
     </main>
 
     <footer>
-      <p> <a href="https://loganduran.github.io/" class="logo-bottom">Logan<span>Duran</span></a> &copy; <script>document.write(new Date().getFullYear())</script> </p>
+      <p>
+        <a href="https://loganduran.github.io/" class="logo-bottom"
+          >Logan<span>Duran</span></a
+        >
+        &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </p>
     </footer>
-  
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script src="scripts.js"></script>
-</body>
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="scripts.js"></script>
+  </body>
 </html>
