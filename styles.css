@@ -490,6 +490,13 @@ footer p {
   background-color: var(--gray);
 }
 
+/* --- End of Timeline --- */
+/*
+/*
+/*
+/*
+/*
+/*
 /* --- MyTechStack --- */
 
 .chapter {
@@ -504,8 +511,8 @@ footer p {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  border-top: 2px solid;
-  border-color: var(--gray);
+  border-top: 2px solid var(--gray);
+  margin-bottom: 60px;
 }
 
 .tab-wrapper {
@@ -513,6 +520,7 @@ footer p {
   gap: 1rem;
   grid-template-columns: 180px 180px 180px;
   justify-content: center;
+  transition: all 0.4s ease;
 }
 
 .tabs {
@@ -520,14 +528,25 @@ footer p {
   grid-template-rows: 150px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   background: var(--gray);
   border-radius: var(--radius);
+  transition: all 0.4s ease;
 }
 
 .tabs:hover {
   background: var(--primary);
   color: var(--light);
   transition: 0.4s;
+}
+
+#techstack .textbubble {
+  display: flex;
+  align-items: center;
+
+  max-width: 572px;
+  width: 100%;
+  padding-top: 5px;
 }
 
 #techstack .textbubble ul li {
@@ -537,6 +556,60 @@ footer p {
   font-weight: 300;
 }
 
+/* --- MyTechStack View Transition Animations --- */
+
+@view-transition-group {
+  transition: all 0.3s ease;
+}
+
+.popup-tab {
+  @view-transition-name: "fade-in" , "fade-out";
+  display: none;
+  align-content: space-between;
+  min-height: 150px;
+  color: var(--light);
+  padding: 20px;
+
+  border: 2px solid var(--gray);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.popup-tab[open] {
+  display: grid;
+}
+
+#b1,
+#b2,
+#b3 {
+  grid-area: 1 / 4 / 1 / 1;
+}
+
+#b4,
+#b5,
+#b6 {
+  grid-area: 2 / 4 / 2 / 1;
+}
+
+#b7,
+#b8,
+#b9 {
+  grid-area: 3 / 4 / 3 / 1;
+}
+
+#b10,
+#b11,
+#b12 {
+  grid-area: 4 / 4 / 4 / 1;
+}
+
+/* --- End of MyTechStack --- */
+/*
+/*
+/*
+/*
+/*
+/* 
 /* --- MyProjects --- */
 
 #projects {
@@ -899,6 +972,43 @@ div.contact-form form h2 {
     grid-template-columns: 180px 180px;
   }
 
+  /* --- MyTechStack Grid Animation Order --- */
+
+  #b1,
+  #b2 {
+    grid-area: 1 / 3 / 1 / 1;
+  }
+
+  #b3 {
+    grid-area: 2 / 3 / 2 / 1;
+  }
+
+  #b4 {
+    grid-area: 2 / 3 / 2 / 1;
+  }
+
+  #b5,
+  #b6 {
+    grid-area: 3 / 3 / 3 / 1;
+  }
+
+  #b7,
+  #b8 {
+    grid-area: 4 / 3 / 4 / 1;
+  }
+
+  #b9 {
+    grid-area: 5 / 3 / 5 / 1;
+  }
+
+  #b10 {
+    grid-area: 5 / 3 / 5 / 1;
+  }
+  #b11,
+  #b12 {
+    grid-area: 6 / 3 / 6 / 1;
+  }
+
   /*  MyProjects Slider  */
   #projects {
     display: flex;
@@ -912,7 +1022,13 @@ div.contact-form form h2 {
     height: calc(100vw - 40vw);
   }
 
-  /* Main and Header */
+  /* --- END of MyTackStack Responsivenes*/
+  /*
+/*
+/*
+/*
+/*
+/* Main and Header */
 
   .nav {
     flex-direction: column;

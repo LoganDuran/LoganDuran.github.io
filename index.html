@@ -202,97 +202,138 @@
             <!------------- Techstack Section ------------->
 
 
-      <section id="techstack">
-        <h2 class="chapter">MyTechStack</h2>
-        <div class="tab-wrapper">
-          <div class="tabs">
-            <iconify-icon icon="akar-icons:html-fill" width="75"></iconify-icon>
-          </div>
-          <div class="tabs">
-            <iconify-icon icon="akar-icons:css-fill" width="75"></iconify-icon>
-          </div>
-          <div class="tabs">
-            <iconify-icon icon="fa6-brands:sass" width="70"></iconify-icon>
-          </div>
-          <div class="tabs">
-            <iconify-icon icon="bxl:php" width="75"></iconify-icon>
-          </div>
-          <div class="tabs">
-            <iconify-icon icon="ic:outline-wordpress" width="75"></iconify-icon>
-          </div>
-          <div class="tabs">
-            <iconify-icon icon="simple-icons:mysql" width="75"></iconify-icon>
-          </div>
-          <div class="tabs">
-            <iconify-icon icon="fa6-brands:square-js" width="65"></iconify-icon>
-          </div>
-          <div class="tabs">
-            <iconify-icon
-              icon="akar-icons:react-fill"
-              width="65"
-            ></iconify-icon>
-          </div>
-          <div class="tabs">
-            <iconify-icon
-              icon="tabler:seo"
-              width="75px"
-              height="75px"
-            ></iconify-icon>
-          </div>
-          <div class="tabs">
-            <iconify-icon
-              icon="solar:figma-bold-duotone"
-              width="75px"
-            ></iconify-icon>
-          </div>
-          <div class="tabs">
-            <iconify-icon icon="mage:photoshop" width="80px"></iconify-icon>
-          </div>
-          <div class="tabs">
-            <!-- <iconify-icon icon="tabler:seo" width="75px" height="75px"></iconify-icon> -->
-          </div>
-        </div>
-        <div class="textbubble">
-          <p>
-            Here is a more detailed breakdown of technologies I feel comfortable
-            working with.
-          </p>
-          <!-- <ul>
-            <li>
-              • Good grasp of core technologies: HTML, CSS, JavaScript, PHP,
-              MySQL
-            </li>
-            <li>
-              • Creating Custom Themes from scratch or adapting existing ones
-              via Child Themes
-            </li>
-            <li>• Creating Custom Post Types and Taxonomies</li>
-            <li>
-              • Familiarity with the command line, setting up build processes,
-              dev tools, and Git and GitHub version control tools
-            </li>
-            <li>
-              • Basic SEO - configuring Yoast and RankMath plugins, and
-              connecting and indexing pages on Google Search Console.
-            </li>
-            <li>
-              • Experience with design tools: Figma, Photoshop, and Illustrator
-            </li>
-            <li>
-              • Experience with Elementor, Elementor Pro, and other
-              page-building tools
-            </li>
-            <li>
-              • And most importantly self-disciplined, motivated, and committed
-              to continuous learning and improvement
-            </li>
+            <section id="techstack">
+              <h2 class="chapter">MyTechStack</h2>
+              <div class="tab-wrapper">
+                <div id="b1" class="popup-tab" onclick="closeTab(this)">
+                  <h2>HTML</h2>
+                  <p>Details about HTML..</p>
+                </div>
+        
+                <div id="b2" class="popup-tab" onclick="closeTab(this)">
+                  <h2>CSS</h2>
+                  <p>Details about CSS..</p>
+                </div>
+        
+                <div id="b3" class="popup-tab" onclick="closeTab(this)">
+                  <h2>JavaScript</h2>
+                  <p>Details about JavaScript..</p>
+                </div>
+        
+                <div class="tabs" onclick="openTab('b1')">
+                  <iconify-icon icon="akar-icons:html-fill" width="75"></iconify-icon>
+                </div>
+                <div class="tabs" onclick="openTab('b2')">
+                  <iconify-icon icon="akar-icons:css-fill" width="75"></iconify-icon>
+                </div>
+                <div class="tabs" onclick="openTab('b3')">
+                  <iconify-icon icon="fa6-brands:square-js" width="65"></iconify-icon>
+                </div>
+        
+                <div id="b4" class="popup-tab" onclick="closeTab(this)">
+                  <h2>PHP</h2>
+                  <p>Details about PHP..</p>
+                </div>
+        
+                <div id="b5" class="popup-tab" onclick="closeTab(this)">
+                  <h2>WordPress</h2>
+                  <p>Details about WordPress..</p>
+                </div>
+        
+                <div id="b6" class="popup-tab" onclick="closeTab(this)">
+                  <h2>MySQL</h2>
+                  <p>Details about MySQL..</p>
+                </div>
+        
+                <div class="tabs" onclick="openTab('b4')">
+                  <iconify-icon icon="bxl:php" width="75"></iconify-icon>
+                </div>
+                <div class="tabs" onclick="openTab('b5')">
+                  <iconify-icon icon="ic:outline-wordpress" width="75"></iconify-icon>
+                </div>
+                <div class="tabs" onclick="openTab('b6')">
+                  <iconify-icon icon="simple-icons:mysql" width="80"></iconify-icon>
+                </div>
+        
+                <div id="b7" class="popup-tab" onclick="closeTab(this)">
+                  <h2>SASS</h2>
+                  <p>Details about SASS..</p>
+                </div>
+        
+                <div id="b8" class="popup-tab" onclick="closeTab(this)">
+                  <h2>React</h2>
+                  <p>Details about React..</p>
+                </div>
+        
+                <div id="b9" class="popup-tab" onclick="closeTab(this)">
+                  <h2>TailwindCSS</h2>
+                  <p>Details about TailwindCSS..</p>
+                </div>
+        
+                <div class="tabs" onclick="openTab('b7')">
+                  <iconify-icon icon="fa6-brands:sass" width="70"></iconify-icon>
+                </div>
+                <div class="tabs" onclick="openTab('b8')">
+                  <iconify-icon icon="akar-icons:react-fill" width="65"></iconify-icon>
+                </div>
+                <div class="tabs" onclick="openTab('b9')">
+                  <iconify-icon
+                    icon="flowbite:tailwind-solid"
+                    width="75px"
+                  ></iconify-icon>
+                </div>
+        
+                <div id="b10" class="popup-tab" onclick="closeTab(this)">
+                  <h2>SEO</h2>
+                  <p>Details about SEO..</p>
+                </div>
+        
+                <div id="b11" class="popup-tab" onclick="closeTab(this)">
+                  <h2>Figma</h2>
+                  <p>Details about Figma..</p>
+                </div>
+                <div id="b12" class="popup-tab" onclick="closeTab(this)">
+                  <h2>Photoshop</h2>
+                  <p>Details about Photoshop..</p>
+                </div>
+        
+                <div class="tabs" onclick="openTab('b10')">
+                  <iconify-icon icon="tabler:seo" width="75"></iconify-icon>
+                  <!-- <iconify-icon
+                    icon="ri:seo-line"
+                    width="75px"
+                    height="75px"
+                  ></iconify-icon> -->
+                  <!-- <iconify-icon
+                    icon="icon-park-outline:seo"
+                    width="75px"
+                    height="75px"
+                  ></iconify-icon> -->
+                </div>
+        
+                <div class="tabs" onclick="openTab('b11')">
+                  <iconify-icon
+                    icon="solar:figma-bold-duotone"
+                    width="75"
+                  ></iconify-icon>
+                </div>
+                <div class="tabs" onclick="openTab('b12')">
+                  <iconify-icon icon="mage:photoshop" width="80"></iconify-icon>
+                </div>
 
-            <li>- CSS pre-processors: Sass or SCSS;</li>
 
-            <li>- SQL DATABASES MySQL, MariaDB;</li> -->
-          </ul>
-        </div>
-      </section>
+              </div>
+
+              
+              <div class="textbubble">
+                <iconify-icon class="arrow" icon="oui:arrow-up" width="50px"></iconify-icon>
+                <p>
+                  Click on the individual icons above for details on my tech stack.
+                </p>
+              </div>
+            </section>
+
+
 
       <!------------- Projects Section ------------->
 
