@@ -118,6 +118,7 @@ strong {
 .logo span {
   color: var(--primary);
   font-family: Righteous;
+  padding-left: 1px;
 }
 
 nav {
@@ -237,6 +238,7 @@ footer .logo-bottom {
 footer .logo-bottom span {
   color: var(--primary);
   font-family: Righteous;
+  padding-left: 1px;
 }
 footer p {
   font-size: 0.9rem;
